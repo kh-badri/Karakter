@@ -10,12 +10,12 @@ class DatasetModel extends Model
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $allowedFields    = [
-        'durasi_layar',
-        'durasi_sosmed',
-        'durasi_tidur',
-        'resiko_depresi'
+        'usia',
+        'pekerjaan',
+        'penghasilan_rata_rata',
+        'frekuensi_pembelian',
+        'total_nilai_transaksi',
+        'jenis_motor',
+        'tingkat_pembelian'
     ];
-
-    // Mengaktifkan auto-timestamps
-    protected $useTimestamps = true;
 }

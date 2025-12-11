@@ -1,26 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" class="h-full">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= esc($title ?? 'KNN Klasifikasi App') ?></title>
+    <title><?= esc($title ?? 'Sistem Klasifikasi Honda') ?></title>
 
-    <!-- Scripts (Tailwind & Alpine.js) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js" defer></script>
-    <script src="//unpkg.com/alpinejs" defer></script>
 
-    <!-- Style untuk Page Loader (disesuaikan untuk dark theme) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'c-dark': '#1B211A', // Hitam Kehijauan (Teks Utama/Navbar)
+                        'c-green': '#628141', // Hijau Tua (Tombol/Aksen Kuat)
+                        'c-sage': '#8BAE66', // Hijau Sage (Aksen Lembut/Alert)
+                        'c-cream': '#EBD5AB', // Krem (Background/Teks Navbar)
+                        'c-red': '#FF5656', // Merah (Error/Hapus)
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
+        /* Loading Screen Style */
         #page-loader {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: #0f172a;
-            /* slate-900 */
+            background-color: #1B211A;
             z-index: 9999;
             display: flex;
             justify-content: center;
@@ -28,165 +47,214 @@
             transition: opacity 0.5s, visibility 0.5s;
         }
 
-        #page-loader.hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-
         .spinner {
-            border: 8px solid #334155;
-            /* slate-700 */
-            border-top: 8px solid #14b8a6;
-            /* teal-500 */
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(235, 213, 171, 0.1);
+            /* c-cream transparan */
+            border-top-color: #628141;
+            /* c-green */
             border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            animation: spin 1.5s linear infinite;
+            animation: spin 1s linear infinite;
         }
 
         @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
+            to {
                 transform: rotate(360deg);
             }
         }
 
-        /* Mencegah 'flickering' saat Alpine.js memuat */
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1B211A;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #628141;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8BAE66;
+        }
+
         [x-cloak] {
             display: none !important;
         }
     </style>
 </head>
 
-<!-- Body dengan background dark theme yang konsisten -->
+<body class="h-full bg-c-cream/20 text-c-dark font-sans antialiased flex flex-col selection:bg-c-green selection:text-white">
 
-<body class="bg-slate-900 text-gray-100 antialiased">
-
-    <!-- Page Loader -->
     <div id="page-loader">
-        <div class="spinner"></div>
+        <div class="text-center">
+            <div class="spinner mx-auto mb-4"></div>
+            <p class="text-c-cream text-sm tracking-widest uppercase animate-pulse">Memuat Sistem...</p>
+        </div>
     </div>
 
-    <div class="min-h-screen flex flex-col">
+    <header x-data="{ mobileMenuOpen: false }" class="bg-c-dark border-b-4 border-c-green sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
 
-        <!-- =================================================================== -->
-        <!-- START: NAVBAR MODERN & RINGAN -->
-        <!-- =================================================================== -->
-        <nav x-data="{ mobileMenuOpen: false, profileMenuOpen: false }" class="bg-slate-800 shadow-lg sticky top-0 z-50">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="bg-c-green p-2 rounded-lg shadow-md shadow-c-green/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-white leading-none">Klasifikasi <span class="text-c-sage">Honda</span></h1>
+                        <p class="text-[10px] text-c-cream/60 uppercase tracking-widest font-medium">Metode Naive Bayes</p>
+                    </div>
+                </div>
 
-                    <!-- Logo & Brand (Menggunakan SVG Internal) -->
-                    <div class="flex items-center">
-                        <a href="<?= base_url('/') ?>" class="flex-shrink-0 flex items-center gap-3">
-                            <!-- SVG Pengganti Ikon Font Awesome -->
-                            <svg class="h-8 w-8 text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V8.25a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 8.25v7.5a2.25 2.25 0 002.25 2.25z" />
+                <nav class="hidden md:flex space-x-2">
+                    <?php
+                    function navItem($href, $label, $activeMenu, $menuName)
+                    {
+                        $isActive = ($activeMenu ?? '') === $menuName;
+                        $classes = $isActive
+                            ? 'bg-c-green text-white shadow-md'
+                            : 'text-c-cream/80 hover:bg-white/10 hover:text-white';
+
+                        echo '<a href="' . base_url($href) . '" class="px-4 py-2.5 rounded-lg text-sm font-bold transition-all duration-200 ' . $classes . '">
+                                ' . $label . '
+                              </a>';
+                    }
+
+                    navItem('/', 'Dashboard', $active_menu ?? '', 'home');
+                    navItem('/dataset', 'Dataset', $active_menu ?? '', 'dataset');
+                    navItem('/analisis', 'Mulai Analisis', $active_menu ?? '', 'analisis');
+                    navItem('/history', 'Riwayat', $active_menu ?? '', 'history');
+                    ?>
+                </nav>
+
+                <div class="hidden md:flex items-center gap-4">
+                    <div class="h-8 w-px bg-white/10"></div> <?php if (session()->get('isLoggedIn')) : ?>
+                        <div class="flex items-center gap-3">
+                            <a href="<?= base_url('/akun') ?>" class="text-right hidden lg:block hover:opacity-80 transition-opacity group">
+                                <p class="text-sm font-bold text-white leading-tight group-hover:text-c-sage transition-colors"><?= esc(session()->get('username')) ?></p>
+                                <p class="text-[10px] text-c-sage">Administrator</p>
+                            </a>
+
+                            <a href="<?= base_url('/akun') ?>" class="block hover:opacity-90 transition-opacity">
+                                <img class="h-10 w-10 rounded-lg object-cover ring-2 ring-c-green bg-white hover:ring-c-sage transition-all"
+                                    src="<?= base_url('uploads/foto_profil/' . (session()->get('foto') ?: 'default.jpg')) ?>"
+                                    alt="User"
+                                    onerror="this.src='https://ui-avatars.com/api/?name=User&background=628141&color=fff'">
+                            </a>
+                        </div>
+                        <a href="<?= site_url('logout') ?>" class="p-2 text-c-red hover:bg-c-red/10 rounded-lg transition-colors" title="Keluar">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                             </svg>
-                            <span class="text-white text-xl font-bold tracking-wider hidden sm:block">Klasifikasi KNN</span>
                         </a>
-                    </div>
+                    <?php else: ?>
+                        <a href="<?= site_url('login') ?>" class="text-c-cream hover:text-white font-bold text-sm">Login</a>
+                    <?php endif; ?>
+                </div>
 
-                    <!-- Navigasi Desktop -->
-                    <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-4">
-                            <a href="<?= base_url('/') ?>" class="transition duration-300 px-3 py-2 rounded-md text-sm font-medium <?= ($active_menu ?? '') === 'home' ? 'bg-slate-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?>">Home</a>
-                            <a href="<?= base_url('/dataset') ?>" class="transition duration-300 px-3 py-2 rounded-md text-sm font-medium <?= ($active_menu ?? '') === 'dataset' ? 'bg-slate-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?>">Dataset</a>
-                            <a href="<?= base_url('/klasifikasi') ?>" class="transition duration-300 px-3 py-2 rounded-md text-sm font-medium <?= ($active_menu ?? '') === 'klasifikasi' ? 'bg-slate-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?>">Klasifikasi</a>
-                            <a href="<?= base_url('/history') ?>" class="transition duration-300 px-3 py-2 rounded-md text-sm font-medium <?= ($active_menu ?? '') === 'history' ? 'bg-slate-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?>">History</a>
-                        </div>
-                    </div>
-
-                    <!-- Dropdown Profil Desktop -->
-                    <div class="hidden md:block">
-                        <div class="ml-4 flex items-center md:ml-6">
-                            <div class="relative">
-                                <button @click="profileMenuOpen = !profileMenuOpen" type="button" class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                                    <span class="sr-only">Buka menu pengguna</span>
-                                    <img class="h-8 w-8 rounded-full object-cover" src="<?= base_url('uploads/foto_profil/' . esc(session()->get('foto'))) ?>" alt="Foto Profil">
-                                </button>
-                                <div x-show="profileMenuOpen" @click.away="profileMenuOpen = false" x-transition class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" x-cloak>
-                                    <div class="px-4 py-2 border-b border-gray-200">
-                                        <p class="text-sm font-semibold text-gray-800"><?= esc(session()->get('username')) ?></p>
-                                        <p class="text-xs text-gray-500">User</p>
-                                    </div>
-                                    <a href="<?= base_url('/akun') ?>" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Pengaturan Akun</a>
-                                    <a href="<?= site_url('logout') ?>" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100">Logout</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tombol Hamburger -->
-                    <div class="-mr-2 flex md:hidden">
-                        <button @click="mobileMenuOpen = !mobileMenuOpen" type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                            <span class="sr-only">Buka menu utama</span>
-                            <svg class="h-6 w-6" :class="{'hidden': mobileMenuOpen, 'block': !mobileMenuOpen }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                            <svg class="h-6 w-6" :class="{'block': mobileMenuOpen, 'hidden': !mobileMenuOpen }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
+                <div class="flex md:hidden">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-c-cream hover:text-white p-2">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
                 </div>
             </div>
+        </div>
 
-            <!-- Menu Mobile -->
-            <div x-show="mobileMenuOpen" class="md:hidden" x-cloak>
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="<?= base_url('/') ?>" class="transition duration-300 block px-3 py-2 rounded-md text-base font-medium <?= ($active_menu ?? '') === 'home' ? 'bg-slate-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?>">Home</a>
-                    <a href="<?= base_url('/dataset') ?>" class="transition duration-300 block px-3 py-2 rounded-md text-base font-medium <?= ($active_menu ?? '') === 'dataset' ? 'bg-slate-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?>">Dataset</a>
-                    <a href="<?= base_url('/klasifikasi') ?>" class="transition duration-300 block px-3 py-2 rounded-md text-base font-medium <?= ($active_menu ?? '') === 'klasifikasi' ? 'bg-slate-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?>">Klasifikasi</a>
-                    <a href="<?= base_url('/history') ?>" class="transition duration-300 block px-3 py-2 rounded-md text-base font-medium <?= ($active_menu ?? '') === 'history' ? 'bg-slate-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?>">History</a>
-                </div>
-                <div class="pt-4 pb-3 border-t border-gray-700">
-                    <div class="flex items-center px-5">
-                        <div class="flex-shrink-0">
-                            <img class="h-10 w-10 rounded-full object-cover" src="<?= base_url('uploads/foto_profil/' . esc(session()->get('foto'))) ?>" alt="Foto Profil">
-                        </div>
-                        <div class="ml-3">
-                            <div class="text-base font-medium leading-none text-white"><?= esc(session()->get('username')) ?></div>
-                            <div class="text-sm font-medium leading-none text-gray-400">User</div>
-                        </div>
-                    </div>
-                    <div class="mt-3 px-2 space-y-1">
-                        <a href="<?= base_url('/akun') ?>" class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Pengaturan Akun</a>
-                        <a href="<?= site_url('logout') ?>" class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Logout</a>
-                    </div>
+        <div x-show="mobileMenuOpen"
+            x-transition
+            class="md:hidden bg-c-dark border-t border-white/10" x-cloak>
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <?php
+                // Mobile Nav Helper
+                function mobileNavItem($href, $label, $activeMenu, $menuName)
+                {
+                    $isActive = ($activeMenu ?? '') === $menuName;
+                    $classes = $isActive
+                        ? 'bg-c-green text-white'
+                        : 'text-c-cream hover:bg-white/10 hover:text-white';
+                    echo '<a href="' . base_url($href) . '" class="block px-3 py-3 rounded-md text-base font-medium ' . $classes . '">' . $label . '</a>';
+                }
+                mobileNavItem('/', 'Dashboard', $active_menu ?? '', 'home');
+                mobileNavItem('/dataset', 'Dataset', $active_menu ?? '', 'dataset');
+                mobileNavItem('/analisis', 'Mulai Analisis', $active_menu ?? '', 'analisis');
+                mobileNavItem('/history', 'Riwayat', $active_menu ?? '', 'history');
+                ?>
+                <a href="<?= base_url('/akun') ?>" class="block px-3 py-3 rounded-md text-base font-medium text-c-cream hover:bg-white/10 hover:text-white">Pengaturan Akun</a>
+
+                <div class="border-t border-white/10 my-2 pt-2">
+                    <a href="<?= site_url('logout') ?>" class="block px-3 py-3 rounded-md text-base font-medium text-c-red hover:bg-c-red/10">Keluar Aplikasi</a>
                 </div>
             </div>
-        </nav>
-        <!-- =================================================================== -->
-        <!-- END: NAVBAR MODERN -->
-        <!-- =================================================================== -->
+        </div>
+    </header>
 
-        <!-- Konten Utama Aplikasi -->
-        <main class="flex-1 w-full">
-            <?= $this->renderSection('content') ?>
-        </main>
+    <main class="flex-grow">
+        <?= $this->renderSection('content') ?>
+    </main>
 
-    </div>
+    <footer class="bg-c-dark text-c-cream/60 py-6 border-t border-white/5 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">
+                &copy; <?= date('Y') ?> <span class="text-c-cream font-bold">Sistem Klasifikasi Honda</span>.
+                Dibuat dengan Metode Naive Bayes.
+            </p>
+        </div>
+    </footer>
 
-    <!-- Script untuk Page Loader dan Notifikasi -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
+        // Hapus loader saat halaman siap
         window.addEventListener('load', function() {
-            document.getElementById('page-loader').classList.add('hidden');
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                loader.style.opacity = '0';
+                setTimeout(() => loader.remove(), 500);
+            }
         });
 
+        // Config Toast Notification
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            background: '#1B211A', // c-dark
+            color: '#EBD5AB', // c-cream
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+
+        // Flash Messages
         <?php if ($success = session()->getFlashdata('success')) : ?>
-            Swal.fire({
+            Toast.fire({
                 icon: 'success',
-                title: 'Sukses!',
+                title: 'Berhasil!',
                 text: '<?= esc($success, 'js') ?>',
-                timer: 2500,
-                showConfirmButton: false,
-                background: '#1e293b',
-                color: '#e2e8f0'
+                iconColor: '#628141' // c-green
+            });
+        <?php endif; ?>
+
+        <?php if ($error = session()->getFlashdata('error')) : ?>
+            Swal.fire({
+                icon: 'error',
+                title: 'Terjadi Kesalahan',
+                text: '<?= esc($error, 'js') ?>',
+                background: '#1B211A',
+                color: '#EBD5AB',
+                confirmButtonColor: '#FF5656',
+                confirmButtonText: 'Tutup'
             });
         <?php endif; ?>
     </script>

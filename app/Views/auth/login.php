@@ -1,115 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Klasifikasi KNN</title>
+    <title>Login | Klasifikasi Honda</title>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'c-dark': '#1B211A', // Teks Utama
+                        'c-green': '#628141', // Tombol/Aksen
+                        'c-sage': '#8BAE66', // Aksen Lembut
+                        'c-cream': '#EBD5AB', // Background
+                        'c-red': '#FF5656', // Error
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body class="bg-slate-900 min-h-screen flex items-center justify-center p-4">
+<body class="bg-c-cream/20 min-h-screen flex items-center justify-center p-4 selection:bg-c-green selection:text-white">
 
-    <div class="bg-slate-800 rounded-xl shadow-2xl w-full max-w-sm lg:max-w-4xl overflow-hidden">
-        <div class="flex flex-col lg:flex-row min-h-[550px]">
-
-            <!-- Kolom Form (Kiri) -->
-            <div class="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
-                <div class="max-w-sm mx-auto w-full">
-                    <div class="text-left mb-8">
-                        <h1 class="text-2xl lg:text-3xl font-bold text-white mb-2">Login Akun</h1>
-                        <p class="text-gray-400 text-sm">Masuk untuk memulai klasifikasi.</p>
-                    </div>
-
-                    <form action="<?= base_url('/login') ?>" method="post" class="space-y-5">
-                        <?= csrf_field() ?>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Username</label>
-                            <input type="text" name="username" required
-                                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition"
-                                placeholder="Masukkan username Anda">
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Password</label>
-                            <input type="password" name="password" required
-                                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition"
-                                placeholder="Masukkan password Anda">
-                        </div>
-
-                        <button type="submit"
-                            class="w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition-colors duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                            Masuk
-                        </button>
-
-                        <div class="text-center pt-3">
-                            <p class="text-gray-400 text-sm">
-                                Belum punya akun?
-                                <a href="<?= site_url('register') ?>" class="text-teal-400 hover:text-teal-300 font-medium">
-                                    Daftar di sini
-                                </a>
-                            </p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Kolom Ilustrasi (Kanan) -->
-            <div class="lg:w-1/2 bg-gradient-to-br from-slate-900 to-slate-800 p-8 flex flex-col items-center justify-center text-center order-1 lg:order-2">
-
-                <div class="text-teal-400 mb-6">
-                    <!-- SVG Ilustrasi yang relevan dengan tema -->
-                    <svg class="w-24 h-24 lg:w-32 lg:h-32 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-                    </svg>
-                </div>
-
-                <div>
-                    <h3 class="text-xl lg:text-2xl font-bold text-white mb-2 leading-tight">Klasifikasi Resiko Depresi (KNN)</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
-                        Alat bantu untuk meningkatkan kesadaran diri terhadap kesehatan mental di era digital.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <?php
-    // Blok PHP untuk notifikasi tidak perlu diubah
-    $successMessage = session()->getFlashdata('success');
-    if ($successMessage):
-    ?>
+    <?php if (session()->getFlashdata('success')) : ?>
         <script>
             Swal.fire({
                 icon: 'success',
                 title: 'Berhasil!',
-                text: '<?= esc($successMessage, 'js') ?>',
+                text: '<?= esc(session()->getFlashdata('success'), 'js') ?>',
                 timer: 2000,
                 showConfirmButton: false,
-                background: '#1e293b', // slate-800
-                color: '#e2e8f0' // slate-200
-            }).then(() => {
-                window.location.href = "<?= base_url('/home') ?>";
+                background: '#1B211A',
+                color: '#EBD5AB',
+                iconColor: '#628141'
             });
         </script>
     <?php endif; ?>
 
-    <?php
-    $errorMessage = session()->getFlashdata('error');
-    if ($errorMessage) :
-    ?>
+    <?php if (session()->getFlashdata('error')) : ?>
         <script>
             Swal.fire({
                 icon: 'error',
                 title: 'Login Gagal',
-                text: '<?= esc($errorMessage, 'js') ?>',
-                background: '#1e293b',
-                color: '#e2e8f0'
+                text: '<?= esc(session()->getFlashdata('error'), 'js') ?>',
+                background: '#1B211A',
+                color: '#EBD5AB',
+                confirmButtonColor: '#FF5656'
             });
         </script>
     <?php endif; ?>
+
+
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl overflow-hidden flex flex-col md:flex-row border border-c-cream/60">
+
+        <div class="md:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+
+            <div class="mb-8">
+                <div class="w-12 h-12 bg-c-green rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-c-green/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-bold text-c-dark">Selamat Datang</h1>
+                <p class="text-gray-500 mt-2 text-sm">Silakan login untuk mengakses dashboard admin.</p>
+            </div>
+
+            <form action="<?= base_url('/login') ?>" method="post" class="space-y-6">
+                <?= csrf_field() ?>
+
+                <div>
+                    <label class="block text-sm font-bold text-c-dark mb-2">Username</label>
+                    <input type="text" name="username" required
+                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-c-dark focus:outline-none focus:ring-2 focus:ring-c-green focus:border-transparent transition placeholder-gray-400"
+                        placeholder="Masukkan username Anda">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-c-dark mb-2">Password</label>
+                    <input type="password" name="password" required
+                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-c-dark focus:outline-none focus:ring-2 focus:ring-c-green focus:border-transparent transition placeholder-gray-400"
+                        placeholder="••••••••">
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-c-green hover:bg-c-dark text-white font-bold py-3.5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                    Masuk ke Sistem
+                </button>
+
+                <div class="text-center pt-2">
+                    <p class="text-sm text-gray-500">
+                        Belum punya akun?
+                        <a href="<?= site_url('register') ?>" class="text-c-green font-bold hover:underline transition">
+                            Daftar Sekarang
+                        </a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <div class="md:w-1/2 bg-c-dark p-8 lg:p-12 flex flex-col items-center justify-center text-center relative overflow-hidden">
+
+            <div class="absolute top-0 right-0 w-64 h-64 bg-c-green opacity-10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 left-0 w-48 h-48 bg-c-sage opacity-10 rounded-full blur-2xl transform -translate-x-1/2 translate-y-1/2"></div>
+
+            <div class="relative z-10">
+                <div class="bg-white/5 p-6 rounded-full inline-block mb-6 backdrop-blur-sm border border-white/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-c-sage" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+
+                <h2 class="text-2xl font-bold text-white mb-3">Klasifikasi Penjualan Honda</h2>
+                <p class="text-c-cream/80 text-sm leading-relaxed max-w-xs mx-auto">
+                    Sistem cerdas untuk memprediksi tingkat pembelian motor Honda menggunakan algoritma <span class="text-c-sage font-bold">Naive Bayes</span>.
+                </p>
+
+                <div class="mt-8 flex gap-2 justify-center">
+                    <div class="w-2 h-2 rounded-full bg-c-green"></div>
+                    <div class="w-2 h-2 rounded-full bg-c-sage"></div>
+                    <div class="w-2 h-2 rounded-full bg-c-cream"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 </body>
 

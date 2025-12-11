@@ -10,13 +10,11 @@ class HistoryModel extends Model
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $allowedFields    = [
-        'durasi_layar',
-        'durasi_sosmed',
-        'durasi_tidur',
-        'k',
-        'hasil_klasifikasi'
+        'tanggal',
+        'akurasi',
+        'total_data',
+        'confusion_matrix',
+        'classification_report',
+        'class_probabilities'
     ];
-
-    // Mengaktifkan auto-timestamps
-    protected $useTimestamps = true;
 }
