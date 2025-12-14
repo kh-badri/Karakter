@@ -6,15 +6,7 @@ use CodeIgniter\Model;
 
 class HistoryModel extends Model
 {
-    protected $table            = 'history';
+    protected $table            = 'history_prediksi';
     protected $primaryKey       = 'id';
-    protected $useAutoIncrement = true;
-    protected $allowedFields    = [
-        'tanggal',
-        'akurasi',
-        'total_data',
-        'confusion_matrix',
-        'classification_report',
-        'class_probabilities'
-    ];
+    protected $allowedFields = ['alpha', 'periode_target', 'hasil_prediksi', 'mape', 'akurasi', 'tanggal_simpan', 'detail_json'];
 }

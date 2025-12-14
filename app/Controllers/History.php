@@ -17,66 +17,63 @@ class History extends BaseController
     public function index()
     {
         $data = [
-            'title'       => 'Riwayat Analisis Naive Bayes',
-            'history'     => $this->historyModel->orderBy('tanggal', 'DESC')->findAll(),
+            'title'   => 'Riwayat Prediksi',
             'active_menu' => 'history',
+            'riwayat' => $this->historyModel->orderBy('id', 'DESC')->findAll()
         ];
-
         return view('history/index', $data);
     }
 
-    public function detail($id = null)
+    public function detail($id)
     {
-        if ($id === null) {
-            return redirect()->to('history')->with('error', 'ID tidak valid.');
+        $riwayat = $this->historyModel->find($id);
+
+        if (!$riwayat) {
+            return redirect()->to('/history')->with('error', 'Data tidak ditemukan.');
         }
 
-        $item = $this->historyModel->find($id);
+        // Decode JSON kembali menjadi Array
+        $hasil_tabel = json_decode($riwayat['detail_json'], true);
 
-        if (!$item) {
-            return redirect()->to('history')->with('error', 'Data riwayat tidak ditemukan.');
+        // Siapkan data untuk Chart
+        $chart_labels = [];
+        $chart_aktual = [];
+        $chart_prediksi = [];
+
+        if ($hasil_tabel) {
+            foreach ($hasil_tabel as $row) {
+                $chart_labels[] = $row['bulan'] . '-' . $row['tahun'];
+                $chart_aktual[] = $row['aktual'];
+                $chart_prediksi[] = $row['prediksi'];
+            }
         }
 
-        try {
-            // DECODE JSON DARI DATABASE
-            // Kita kembalikan strukturnya mirip dengan output Python agar view bisa reuse kode
+        $data = [
+            'title'          => 'Detail Riwayat',
+            'alpha'          => $riwayat['alpha'],
+            'periode_target' => $riwayat['periode_target'],
+            'prediksi_next'  => $riwayat['hasil_prediksi'],
+            'mape'           => $riwayat['mape'],
+            'akurasi'        => $riwayat['akurasi'],
+            'tanggal_simpan' => $riwayat['tanggal_simpan'],
+            'hasil_tabel'    => $hasil_tabel,
+            'chart_labels'   => $chart_labels,
+            'chart_aktual'   => $chart_aktual,
+            'chart_prediksi' => $chart_prediksi
+        ];
 
-            $probs = json_decode($item['class_probabilities'], true);
-
-            // Trik: Ambil nama kelas (Rendah, Sedang, Tinggi) dari keys probabilitas
-            $classes = array_keys($probs);
-
-            $hasil_rekonstruksi = [
-                'status' => 'success',
-                'evaluasi' => [
-                    'accuracy'              => $item['akurasi'],
-                    'total_data'            => $item['total_data'],
-                    'confusion_matrix'      => json_decode($item['confusion_matrix'], true),
-                    'classification_report' => json_decode($item['classification_report'], true),
-                    'classes'               => $classes
-                ],
-                'analisis' => [
-                    'class_probabilities' => $probs
-                ]
-            ];
-
-            $data = [
-                'title'   => 'Detail Riwayat',
-                'tanggal' => $item['tanggal'],
-                'hasil'   => $hasil_rekonstruksi
-            ];
-
-            return view('history/detail', $data);
-        } catch (\Exception $e) {
-            return redirect()->to('history')->with('error', 'Data korup/error: ' . $e->getMessage());
-        }
+        return view('history/detail', $data);
     }
 
-    public function delete($id = null)
+    public function delete($id)
     {
-        if ($id === null) return redirect()->to('history');
-
         $this->historyModel->delete($id);
-        return redirect()->to('history')->with('success', 'Data riwayat berhasil dihapus.');
+        return redirect()->to('/history')->with('success', 'Data riwayat berhasil dihapus.');
+    }
+
+    public function hapusSemua()
+    {
+        $this->historyModel->truncate();
+        return redirect()->to('/history')->with('success', 'Seluruh riwayat berhasil dibersihkan.');
     }
 }

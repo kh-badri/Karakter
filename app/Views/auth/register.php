@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | Klasifikasi Honda</title>
+    <title>Daftar Akun | Prediksi Nikah KUA</title>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -17,11 +18,11 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'c-dark': '#1B211A', // Teks Utama
-                        'c-green': '#628141', // Tombol/Aksen
-                        'c-sage': '#8BAE66', // Aksen Lembut
-                        'c-cream': '#EBD5AB', // Background
-                        'c-red': '#FF5656', // Error
+                        'teal-light': '#66D2CE',
+                        'teal-main': '#2DAA9E',
+                        'gray-bg': '#EAEAEA',
+                        'cream-accent': '#E3D2C3',
+                        'danger': '#FF5656',
                     }
                 }
             }
@@ -29,29 +30,48 @@
     </script>
 </head>
 
-<body class="bg-c-cream/20 min-h-screen flex items-center justify-center p-4 selection:bg-c-green selection:text-white">
+<body class="bg-gray-bg min-h-screen flex items-center justify-center p-4 lg:p-8">
 
-    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl overflow-hidden flex flex-col md:flex-row border border-c-cream/60">
+    <div class="bg-white rounded-3xl shadow-2xl w-full max-w-5xl overflow-hidden flex flex-col md:flex-row border border-cream-accent/50 min-h-[600px]">
 
-        <div class="md:w-1/2 p-8 lg:p-12 flex flex-col justify-center order-2 md:order-1">
+        <div class="hidden md:block md:w-5/12 relative bg-gray-100">
+            <img src="<?= base_url('public/nikah2.png') ?>" alt="Ilustrasi Nikah" class="absolute inset-0 w-full h-full object-cover">
+
+            <div class="absolute inset-0 bg-gradient-to-b from-teal-main/80 to-teal-light/90 mix-blend-multiply"></div>
+
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-10 text-white z-10">
+                <div class="bg-white/20 backdrop-blur-sm p-4 rounded-full mb-6 border border-white/30 shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                    </svg>
+                </div>
+
+                <h2 class="text-2xl font-bold mb-3 drop-shadow-md">Bergabung Bersama Kami</h2>
+                <p class="text-white/90 text-sm leading-relaxed drop-shadow-sm font-medium">
+                    Daftarkan akun admin baru untuk mulai mengelola data prediksi pernikahan.
+                </p>
+            </div>
+        </div>
+
+        <div class="md:w-7/12 p-8 lg:p-12 flex flex-col justify-center relative">
 
             <div class="mb-6">
-                <h1 class="text-2xl font-bold text-c-dark">Buat Akun Baru</h1>
-                <p class="text-gray-500 text-sm mt-1">Daftar untuk mulai menggunakan sistem prediksi.</p>
+                <h1 class="text-2xl lg:text-3xl font-extrabold text-gray-800">Buat Akun Baru</h1>
+                <p class="text-gray-500 mt-1 text-sm">Lengkapi data berikut untuk pendaftaran.</p>
             </div>
 
             <?php $validation = \Config\Services::validation(); ?>
             <?php if (session()->getFlashdata('error') || $validation->getErrors()) : ?>
-                <div class="bg-red-50 border-l-4 border-c-red p-4 mb-6 rounded-r-lg">
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0">
-                            <svg class="h-5 w-5 text-c-red" viewBox="0 0 20 20" fill="currentColor">
+                <div class="bg-red-50 border-l-4 border-danger p-4 mb-6 rounded-r-xl">
+                    <div class="flex">
+                        <div class="shrink-0">
+                            <svg class="h-5 w-5 text-danger" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
                             </svg>
                         </div>
                         <div class="ml-3">
-                            <h3 class="text-sm font-medium text-red-800">Terdapat kesalahan:</h3>
-                            <div class="mt-1 text-sm text-red-700">
+                            <h3 class="text-sm font-bold text-red-800">Terdapat kesalahan:</h3>
+                            <div class="mt-1 text-xs text-red-700 font-medium">
                                 <ul class="list-disc list-inside space-y-1">
                                     <?php if (session()->getFlashdata('error')) : ?>
                                         <li><?= session()->getFlashdata('error') ?></li>
@@ -67,76 +87,48 @@
                 </div>
             <?php endif; ?>
 
-            <form action="<?= site_url('register') ?>" method="post" class="space-y-5">
+            <form action="<?= site_url('register') ?>" method="post" class="space-y-4">
                 <?= csrf_field() ?>
 
                 <div>
-                    <label class="block text-sm font-bold text-c-dark mb-1">Username</label>
+                    <label class="block text-xs font-bold text-gray-700 mb-1 uppercase tracking-wide">Username</label>
                     <input type="text" name="username" required value="<?= old('username') ?>"
-                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-c-dark focus:outline-none focus:ring-2 focus:ring-c-green focus:border-transparent transition placeholder-gray-400"
-                        placeholder="Contoh: admin_honda">
+                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-main focus:border-transparent transition-all placeholder-gray-400 font-medium"
+                        placeholder="Contoh: admin_kua">
                 </div>
 
-                <div>
-                    <label class="block text-sm font-bold text-c-dark mb-1">Password</label>
-                    <input type="password" name="password" required
-                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-c-dark focus:outline-none focus:ring-2 focus:ring-c-green focus:border-transparent transition placeholder-gray-400"
-                        placeholder="Minimal 6 karakter">
-                </div>
-
-                <div>
-                    <label class="block text-sm font-bold text-c-dark mb-1">Konfirmasi Password</label>
-                    <input type="password" name="password_confirm" required
-                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-c-dark focus:outline-none focus:ring-2 focus:ring-c-green focus:border-transparent transition placeholder-gray-400"
-                        placeholder="Ulangi password">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-1 uppercase tracking-wide">Password</label>
+                        <input type="password" name="password" required
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-main focus:border-transparent transition-all placeholder-gray-400 font-medium"
+                            placeholder="Minimal 6 karakter">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-1 uppercase tracking-wide">Konfirmasi</label>
+                        <input type="password" name="password_confirm" required
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-main focus:border-transparent transition-all placeholder-gray-400 font-medium"
+                            placeholder="Ulangi password">
+                    </div>
                 </div>
 
                 <button type="submit"
-                    class="w-full bg-c-green hover:bg-c-dark text-white font-bold py-3.5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 mt-2">
-                    Daftar Akun
+                    class="w-full bg-teal-main hover:bg-[#25968a] text-white font-bold py-3.5 rounded-xl shadow-lg shadow-teal-main/30 hover:shadow-teal-main/50 transition-all duration-300 transform hover:-translate-y-0.5 mt-4 flex justify-center items-center gap-2">
+                    <span>Daftar Sekarang</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
                 </button>
 
-                <div class="text-center pt-2">
+                <div class="text-center pt-4 border-t border-gray-100 mt-6">
                     <p class="text-sm text-gray-500">
                         Sudah punya akun?
-                        <a href="<?= site_url('login') ?>" class="text-c-green font-bold hover:underline transition">
-                            Login di sini
+                        <a href="<?= site_url('login') ?>" class="text-teal-main font-bold hover:underline transition ml-1">
+                            Login disini
                         </a>
                     </p>
                 </div>
             </form>
-        </div>
-
-        <div class="md:w-1/2 bg-c-dark p-8 lg:p-12 flex flex-col items-center justify-center text-center relative overflow-hidden order-1 md:order-2">
-
-            <div class="absolute top-0 left-0 w-full h-full opacity-10">
-                <div class="absolute top-10 right-10 w-32 h-32 bg-c-sage rounded-full blur-3xl"></div>
-                <div class="absolute bottom-10 left-10 w-40 h-40 bg-c-green rounded-full blur-3xl"></div>
-            </div>
-
-            <div class="relative z-10">
-                <div class="bg-white/5 p-5 rounded-2xl inline-block mb-6 backdrop-blur-sm border border-white/10 shadow-xl">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-c-sage" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                </div>
-
-                <h2 class="text-2xl font-bold text-white mb-3">Bergabunglah Sekarang</h2>
-                <p class="text-c-cream/80 text-sm leading-relaxed max-w-xs mx-auto">
-                    Daftarkan akun Anda untuk mengakses fitur lengkap <span class="text-white font-semibold">Klasifikasi Tingkat Pembelian Motor Honda</span>.
-                </p>
-
-                <div class="mt-8 grid grid-cols-2 gap-4 text-xs text-c-cream/60">
-                    <div class="flex flex-col items-center">
-                        <span class="font-bold text-white text-lg">85%+</span>
-                        <span>Akurasi Model</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span class="font-bold text-white text-lg">Cepat</span>
-                        <span>Proses Analisis</span>
-                    </div>
-                </div>
-            </div>
         </div>
 
     </div>

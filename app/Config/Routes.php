@@ -18,37 +18,24 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->post('akun/update_profil', 'Akun::updateProfil');
     $routes->post('akun/update_sandi', 'Akun::updateSandi');
 
-    // --- RUTE DATASET ---
-    $routes->group('dataset', function ($routes) {
-        $routes->get('/', 'Dataset::index');
-        $routes->post('save', 'Dataset::save');
-        $routes->post('upload', 'Dataset::upload');
+    $routes->get('/data-nikah', 'DataNikah::index');
+    $routes->post('/data-nikah/save', 'DataNikah::save');
+    $routes->post('/data-nikah/upload', 'DataNikah::upload');
+    $routes->get('/data-nikah/hapus-semua', 'DataNikah::hapusSemua');
+    $routes->get('/data-nikah/delete/(:num)', 'DataNikah::delete/$1');
 
-        // Mengizinkan POST dan DELETE untuk hapusSemua
-        $routes->match(['post', 'delete'], 'hapusSemua', 'Dataset::hapusSemua');
+    $routes->get('/prediksi', 'Prediksi::index');
+    $routes->post('/prediksi/proses', 'Prediksi::proses');
+    $routes->post('/prediksi/simpan', 'Prediksi::simpan');
 
-        // [PERBAIKAN DISINI] 
-        // Mengubah 'get' menjadi 'post' karena form HTML menggunakan method="post"
-        // Jika Anda menggunakan <input type="hidden" name="_method" value="DELETE">, 
-        // Anda bisa menggunakan $routes->delete(...) atau $routes->match(['post', 'delete']...)
-        $routes->post('delete/(:num)', 'Dataset::delete/$1');
-    });
+    $routes->get('/history', 'History::index');
+    $routes->get('/history/delete/(:num)', 'History::delete/$1');
+    $routes->get('/history/hapus-semua', 'History::hapusSemua');
+    $routes->get('/history/detail/(:num)', 'History::detail/$1');
 
-    // --- RUTE ANALISIS ---
-    $routes->group('analisis', function ($routes) {
-        $routes->get('/', 'Analisis::index');
-        $routes->post('proses', 'Analisis::proses');
-        $routes->post('simpan', 'Analisis::simpan');
-    });
 
     // --- RUTE HISTORY ---
-    $routes->group('history', function ($routes) {
-        $routes->get('/', 'History::index');
-        // [PERBAIKAN DISINI]
-        // Gunakan 'match' agar bisa menerima POST (form biasa) atau DELETE (spoofing)
-        $routes->match(['post', 'delete'], 'delete/(:num)', 'History::delete/$1');
-        $routes->get('detail/(:num)', 'History::detail/$1');
-    });
+
 });
 
 
