@@ -1,0 +1,1533 @@
+ERROR - 2025-09-04 08:09:06 --> Error Apriori hybrid: Error saat menjalankan Python Apriori: 
+ERROR - 2025-09-04 08:09:08 --> Error Apriori hybrid: Error saat menjalankan Python Apriori: 
+ERROR - 2025-09-04 08:14:51 --> Error Apriori hybrid: Error saat menjalankan Python Apriori: 
+ERROR - 2025-09-04 08:14:52 --> Error Apriori hybrid: Error saat menjalankan Python Apriori: 
+ERROR - 2025-09-04 08:14:55 --> Error Apriori hybrid: Error saat menjalankan Python Apriori: 
+ERROR - 2025-09-04 08:15:12 --> Error Apriori hybrid: Error saat menjalankan Python Apriori: 
+ERROR - 2025-09-04 08:17:11 --> Error Apriori hybrid: Error saat menjalankan Python Apriori: 
+ERROR - 2025-09-04 08:17:16 --> Error Apriori hybrid: Error saat menjalankan Python Apriori: 
+ERROR - 2025-09-04 08:17:17 --> Error Apriori hybrid: Error saat menjalankan Python Apriori: 
+ERROR - 2025-09-04 08:19:45 --> Error Apriori hybrid: Error saat menjalankan Python Apriori: 
+ERROR - 2025-09-04 08:20:55 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-09-04 08:20:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: analisis/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (:min_support:, :min_confidence:, :min_lift:, :hasil_analisis:, :jumlah_aturan:, :created_at:)', [...], false)
+ 2 APPPATH\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:20:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:20:55\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:20:55\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (:min_support:, :min_confidence:, :min_lift:, :hasil_analisis:, :jumlah_aturan:, :created_at:)', [...], false)
+ 4 APPPATH\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:20:55 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:20:55\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:20:55\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:20:55\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (:min_support:, :min_confidence:, :min_lift:, :hasil_analisis:, :jumlah_aturan:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-04 08:21:42 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-09-04 08:21:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: analisis/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (:min_support:, :min_confidence:, :min_lift:, :hasil_analisis:, :jumlah_aturan:, :created_at:)', [...], false)
+ 2 APPPATH\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:21:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:21:42\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:21:42\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (:min_support:, :min_confidence:, :min_lift:, :hasil_analisis:, :jumlah_aturan:, :created_at:)', [...], false)
+ 4 APPPATH\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:21:42 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:21:42\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:21:42\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:21:42\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (:min_support:, :min_confidence:, :min_lift:, :hasil_analisis:, :jumlah_aturan:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-04 08:21:50 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-09-04 08:21:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: analisis/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (:min_support:, :min_confidence:, :min_lift:, :hasil_analisis:, :jumlah_aturan:, :created_at:)', [...], false)
+ 2 APPPATH\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:21:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:21:50\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:21:50\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (:min_support:, :min_confidence:, :min_lift:, :hasil_analisis:, :jumlah_aturan:, :created_at:)', [...], false)
+ 4 APPPATH\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:21:50 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:21:50\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:21:50\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:21:50\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (:min_support:, :min_confidence:, :min_lift:, :hasil_analisis:, :jumlah_aturan:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-04 08:21:51 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-09-04 08:21:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: analisis/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (:min_support:, :min_confidence:, :min_lift:, :hasil_analisis:, :jumlah_aturan:, :created_at:)', [...], false)
+ 2 APPPATH\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:21:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:21:51\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:21:51\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (:min_support:, :min_confidence:, :min_lift:, :hasil_analisis:, :jumlah_aturan:, :created_at:)', [...], false)
+ 4 APPPATH\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:21:51 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:21:51\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:21:51\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (10, 60, 1.2, \'[{\\"antecedent\\":[\\"Jenis_Properti=Apartemen\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":64.70588235294117,\\"lift\\":1.5406162464985993},{\\"antecedent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":28.000000000000004,\\"confidence\\":66.66666666666666,\\"lift\\":1.282051282051282},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Sedang\\"],\\"support\\":22,\\"confidence\\":75.86206896551724,\\"lift\\":1.80623973727422},{\\"antecedent\\":[\\"Lokasi=Desa\\"],\\"consequent\\":[\\"Luas_Tanah=Kecil\\"],\\"support\\":14.000000000000002,\\"confidence\\":63.63636363636363,\\"lift\\":2.2727272727272725},{\\"antecedent\\":[\\"Luas_Tanah=Kecil\\"],\\"consequent\\":[\\"Jarak_Ke_Pusat_Kota=Dekat\\"],\\"support\\":18,\\"confidence\\":64.28571428571429,\\"lift\\":2.0089285714285716},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Sekolah\\"],\\"consequent\\":[\\"Jenis_Properti=Apartemen\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Jenis_Tanah=Lempung\\"],\\"support\\":17,\\"confidence\\":65.38461538461539,\\"lift\\":1.5947467166979363},{\\"antecedent\\":[\\"Lokasi=Kota\\"],\\"consequent\\":[\\"Luas_Tanah=Sedang\\"],\\"support\\":16,\\"confidence\\":61.53846153846154,\\"lift\\":1.8099547511312217},{\\"antecedent\\":[\\"Luas_Tanah=Besar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":25,\\"confidence\\":65.78947368421053,\\"lift\\":1.265182186234818},{\\"antecedent\\":[\\"Jenis_Properti=Ruko\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":13,\\"confidence\\":65,\\"lift\\":1.25},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Lokasi=Pinggiran\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.259946949602122},{\\"antecedent\\":[\\"Fasilitas_Sekitar=Pasar\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":19,\\"confidence\\":65.51724137931035,\\"lift\\":1.59798149705635},{\\"antecedent\\":[\\"Jenis_Properti=Gudang\\"],\\"consequent\\":[\\"Jenis_Tanah=Bebatuan\\"],\\"support\\":16,\\"confidence\\":69.56521739130434,\\"lift\\":1.6967126193001059}]\', 13, \'2025-09-04 08:21:51\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `history_analisis` (`min_support`, `min_confidence`, `min_lift`, `hasil_analisis`, `jumlah_aturan`, `created_at`) VALUES (:min_support:, :min_confidence:, :min_lift:, :hasil_analisis:, :jumlah_aturan:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Analisis.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-04 08:32:44 --> mysqli_sql_exception: Unknown column 'p.id' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`...', Array, false)
+#4 C:\laragon\www\apriori\app\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\app\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Dataset->index()
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-09-04 08:32:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+[Method: GET, Route: dataset]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 2 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:32:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 4 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:32:44 --> [Caused by] mysqli_sql_exception: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 5 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-04 08:32:47 --> mysqli_sql_exception: Unknown column 'p.id' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`...', Array, false)
+#4 C:\laragon\www\apriori\app\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\app\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Dataset->index()
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-09-04 08:32:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+[Method: GET, Route: dataset]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 2 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:32:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 4 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:32:47 --> [Caused by] mysqli_sql_exception: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 5 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-04 08:32:50 --> mysqli_sql_exception: Unknown column 'p.id' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`...', Array, false)
+#4 C:\laragon\www\apriori\app\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\app\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Dataset->index()
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-09-04 08:32:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+[Method: GET, Route: dataset]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 2 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:32:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 4 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:32:50 --> [Caused by] mysqli_sql_exception: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 5 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-04 08:32:52 --> mysqli_sql_exception: Unknown column 'p.id' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`...', Array, false)
+#4 C:\laragon\www\apriori\app\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\app\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Dataset->index()
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-09-04 08:32:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+[Method: GET, Route: dataset]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 2 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:32:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 4 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:32:52 --> [Caused by] mysqli_sql_exception: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 5 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-04 08:32:56 --> mysqli_sql_exception: Unknown column 'p.id' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`...', Array, false)
+#4 C:\laragon\www\apriori\app\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\app\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Dataset->index()
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-09-04 08:32:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+[Method: GET, Route: dataset]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 2 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:32:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 4 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:32:56 --> [Caused by] mysqli_sql_exception: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 5 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-04 08:33:00 --> mysqli_sql_exception: Unknown column 'p.id' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`...', Array, false)
+#4 C:\laragon\www\apriori\app\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\app\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Dataset->index()
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-09-04 08:33:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+[Method: GET, Route: dataset]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 2 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:33:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 4 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:33:00 --> [Caused by] mysqli_sql_exception: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 5 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-04 08:33:26 --> mysqli_sql_exception: Unknown column 'p.id' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`...', Array, false)
+#4 C:\laragon\www\apriori\app\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\app\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Dataset->index()
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-09-04 08:33:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+[Method: GET, Route: dataset]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 2 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:33:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 4 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:33:26 --> [Caused by] mysqli_sql_exception: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 5 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-04 08:33:29 --> mysqli_sql_exception: Unknown column 'p.id' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`...', Array, false)
+#4 C:\laragon\www\apriori\app\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\app\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Dataset->index()
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-09-04 08:33:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+[Method: GET, Route: dataset]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 2 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:33:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 4 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:33:29 --> [Caused by] mysqli_sql_exception: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 5 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-04 08:33:36 --> mysqli_sql_exception: Unknown column 'p.id' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`...', Array, false)
+#4 C:\laragon\www\apriori\app\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\app\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Dataset->index()
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-09-04 08:33:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+[Method: GET, Route: dataset]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 2 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:33:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 4 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:33:36 --> [Caused by] mysqli_sql_exception: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 5 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-04 08:35:39 --> mysqli_sql_exception: Unknown column 'p.id' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`...', Array, false)
+#4 C:\laragon\www\apriori\app\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\app\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Dataset->index()
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-09-04 08:35:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+[Method: GET, Route: dataset]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 2 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:35:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 4 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:35:39 --> [Caused by] mysqli_sql_exception: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 5 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-09-04 08:35:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-04 08:35:52 --> mysqli_sql_exception: Unknown column 'p.id' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`...', Array, false)
+#4 C:\laragon\www\apriori\app\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\app\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Dataset->index()
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-09-04 08:35:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+[Method: GET, Route: dataset]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 2 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:35:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 4 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:35:52 --> [Caused by] mysqli_sql_exception: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 5 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-09-04 08:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:37:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:38:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:38:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-04 08:38:43 --> mysqli_sql_exception: Unknown column 'p.id' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`...', Array, false)
+#4 C:\laragon\www\apriori\app\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\app\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Dataset->index()
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-09-04 08:38:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+[Method: GET, Route: dataset]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 2 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:38:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 4 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:38:43 --> [Caused by] mysqli_sql_exception: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 5 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-09-04 08:41:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-04 08:41:49 --> mysqli_sql_exception: Unknown column 'p.id' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`...', Array, false)
+#4 C:\laragon\www\apriori\app\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\app\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Dataset->index()
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-09-04 08:41:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+[Method: GET, Route: dataset]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 2 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:41:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 4 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-04 08:41:49 --> [Caused by] mysqli_sql_exception: Unknown column 'p.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id`, `p`.`nama_properti`, GROUP_CONCAT(k.nilai ORDER BY k.kategori SEPARATOR ", ") as kriteria_list
+FROM `properti` `p`
+JOIN `transaksi_properti` `tp` ON `p`.`id` = `tp`.`id_properti`
+JOIN `kriteria` `k` ON `tp`.`id_kriteria` = `k`.`id`
+GROUP BY `p`.`id`, `p`.`nama_properti`
+ORDER BY `p`.`id` ASC', [], false)
+ 5 APPPATH\Models\PropertiModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dataset.php(17): App\Models\PropertiModel->getPropertiWithKriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dataset->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataset))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-09-04 08:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:44:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:44:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:55:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:55:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 08:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:18:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:19:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:20:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:20:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:21:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:21:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:21:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:21:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:21:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:21:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:22:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-04 09:22:47 --> REDIRECTED ROUTE at http://localhost/apriori/
+DEBUG - 2025-09-04 09:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:44:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-04 09:44:11 --> REDIRECTED ROUTE at http://localhost/apriori/
+DEBUG - 2025-09-04 09:44:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-04 09:44:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

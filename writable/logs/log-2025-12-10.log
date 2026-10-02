@@ -1,0 +1,12 @@
+ERROR - 2025-12-10 09:15:40 --> Error Analisis Naive Bayes: Script Python melaporkan error: Tidak ada data di tabel 'dataset_umkm'. Harap isi data terlebih dahulu.
+ERROR - 2025-12-10 10:55:44 --> Gagal tampilkan detail history: Gagal mem-parsing data JSON dari database.
+CRITICAL - 2025-12-10 11:03:52 --> ErrorException: Undefined array key "accuracy"
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 26.
+ 1 APPPATH\Controllers\Home.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "accuracy"', 'C:\\laragon\\www\\motor\\app\\Controllers\\Home.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,480 @@
+DEBUG - 2025-08-29 16:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:06:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-29 16:06:22 --> REDIRECTED ROUTE at http://localhost/apriori/
+DEBUG - 2025-08-29 16:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:06:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-29 16:06:41 --> REDIRECTED ROUTE at http://localhost/apriori/
+DEBUG - 2025-08-29 16:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:06:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:06:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-29 16:09:00 --> REDIRECTED ROUTE at http://localhost/apriori/
+DEBUG - 2025-08-29 16:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:13:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:13:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:13:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:13:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:14:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:18:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:18:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:18:42 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:18:42 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:18:47 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:18:47 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:18:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:18:52 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:18:52 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:19:49 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:19:49 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:19:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:20:14 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:20:14 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:21:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:21:40 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:21:40 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:21:50 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:21:50 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:22:25 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:22:25 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:26:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:26:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:26:28 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:26:28 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:27:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:27:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-29 16:27:05 --> Hasil analisis akan disimpan ke session: {"jumlah_rules":17,"parameter":{"minSupport":10,"minConfidence":60,"minLift":1.2}}
+INFO - 2025-08-29 16:27:05 --> Session data verification: SUCCESS
+DEBUG - 2025-08-29 16:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-29 16:27:08 --> Method simpan() dipanggil dengan method: POST
+INFO - 2025-08-29 16:27:08 --> POST data: {"csrf_test_name":"0ba956f7c4d32f504082e0ac1b77958d"}
+INFO - 2025-08-29 16:27:08 --> Session data: {"parameter":{"min_support":10,"min_confidence":60,"min_lift":1.2},"hasil":[{"antecedent":["Jenis_Tanah_Bebatuan","Jarak_Ke_Pusat_Kota_Sedang"],"consequent":["Fasilitas_Sekitar_Pasar"],"support":0.1,"confidence":0.7142857142857143,"lift":2.7472527472527473,"antecedent_ids":[2,5],"consequent_ids":[6]},{"antecedent":["Lokasi_Pinggiran","Jarak_Ke_Pusat_Kota_Dekat"],"consequent":["Luas_Tanah_Kecil"],"support":0.1,"confidence":0.8333333333333334,"lift":2.450980392156863,"antecedent_ids":[7,14],"consequent_ids":[4]},{"antecedent":["Fasilitas_Sekitar_Jalan Raya"],"consequent":["Lokasi_Desa"],"support":0.1,"confidence":0.625,"lift":2.2321428571428568,"antecedent_ids":[18],"consequent_ids":[16]},{"antecedent":["Jenis_Tanah_Bebatuan","Fasilitas_Sekitar_Pasar"],"consequent":["Jarak_Ke_Pusat_Kota_Sedang"],"support":0.1,"confidence":0.7142857142857143,"lift":1.9841269841269842,"antecedent_ids":[2,6],"consequent_ids":[5]},{"antecedent":["Lokasi_Kota"],"consequent":["Luas_Tanah_Sedang"],"support":0.16,"confidence":0.6153846153846154,"lift":1.923076923076923,"antecedent_ids":[1],"consequent_ids":[11]},{"antecedent":["Fasilitas_Sekitar_Jalan Raya"],"consequent":["Luas_Tanah_Kecil"],"support":0.1,"confidence":0.625,"lift":1.838235294117647,"antecedent_ids":[18],"consequent_ids":[4]},{"antecedent":["Luas_Tanah_Kecil","Lokasi_Pinggiran"],"consequent":["Jarak_Ke_Pusat_Kota_Dekat"],"support":0.1,"confidence":0.625,"lift":1.838235294117647,"antecedent_ids":[4,7],"consequent_ids":[14]},{"antecedent":["Luas_Tanah_Kecil","Jenis_Tanah_Lempung"],"consequent":["Lokasi_Pinggiran"],"support":0.1,"confidence":0.8333333333333334,"lift":1.8115942028985508,"antecedent_ids":[4,10],"consequent_ids":[7]},{"antecedent":["Lokasi_Pinggiran","Jenis_Properti_Apartemen"],"consequent":["Jarak_Ke_Pusat_Kota_Sedang"],"support":0.1,"confidence":0.625,"lift":1.7361111111111112,"antecedent_ids":[7,8],"consequent_ids":[5]},{"antecedent":["Fasilitas_Sekitar_Pasar"],"consequent":["Jarak_Ke_Pusat_Kota_Sedang"],"support":0.16,"confidence":0.6153846153846154,"lift":1.7094017094017093,"antecedent_ids":[6],"consequent_ids":[5]},{"antecedent":["Jarak_Ke_Pusat_Kota_Sedang","Fasilitas_Sekitar_Pasar"],"consequent":["Jenis_Tanah_Bebatuan"],"support":0.1,"confidence":0.625,"lift":1.6447368421052633,"antecedent_ids":[5,6],"consequent_ids":[2]},{"antecedent":["Jenis_Properti_Gudang"],"consequent":["Jenis_Tanah_Bebatuan"],"support":0.12,"confidence":0.6,"lift":1.5789473684210524,"antecedent_ids":[19],"consequent_ids":[2]},{"antecedent":["Jarak_Ke_Pusat_Kota_Sedang","Luas_Tanah_Besar"],"consequent":["Lokasi_Pinggiran"],"support":0.1,"confidence":0.7142857142857143,"lift":1.5527950310559004,"antecedent_ids":[5,9],"consequent_ids":[7]},{"antecedent":["Lokasi_Pinggiran","Jenis_Properti_Apartemen"],"consequent":["Jenis_Tanah_Lempung"],"support":0.1,"confidence":0.625,"lift":1.4880952380952384,"antecedent_ids":[7,8],"consequent_ids":[10]},{"antecedent":["Luas_Tanah_Kecil","Lokasi_Pinggiran"],"consequent":["Jenis_Tanah_Lempung"],"support":0.1,"confidence":0.625,"lift":1.4880952380952384,"antecedent_ids":[4,7],"consequent_ids":[10]},{"antecedent":["Jarak_Ke_Pusat_Kota_Sedang","Jenis_Properti_Apartemen"],"consequent":["Lokasi_Pinggiran"],"support":0.1,"confidence":0.625,"lift":1.358695652173913,"antecedent_ids":[5,8],"consequent_ids":[7]},{"antecedent":["Jenis_Properti_Apartemen","Jenis_Tanah_Lempung"],"consequent":["Lokasi_Pinggiran"],"support":0.1,"confidence":0.625,"lift":1.358695652173913,"antecedent_ids":[8,10],"consequent_ids":[7]}],"timestamp":"2025-08-29 16:27:05","transaction_count":50}
+INFO - 2025-08-29 16:27:08 --> Data to save: {"min_support":10,"min_confidence":60,"min_lift":1.2,"hasil_analisis":"[\n    {\n        \"antecedent\": [\n            \"Jenis_Tanah_Bebatuan\",\n            \"Jarak_Ke_Pusat_Kota_Sedang\"\n        ],\n        \"consequent\": [\n            \"Fasilitas_Sekitar_Pasar\"\n        ],\n        \"support\": 0.1,\n        \"confidence\": 0.7142857142857143,\n        \"lift\": 2.7472527472527473,\n        \"antecedent_ids\": [\n            2,\n            5\n        ],\n        \"consequent_ids\": [\n            6\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Lokasi_Pinggiran\",\n            \"Jarak_Ke_Pusat_Kota_Dekat\"\n        ],\n        \"consequent\": [\n            \"Luas_Tanah_Kecil\"\n        ],\n        \"support\": 0.1,\n        \"confidence\": 0.8333333333333334,\n        \"lift\": 2.450980392156863,\n        \"antecedent_ids\": [\n            7,\n            14\n        ],\n        \"consequent_ids\": [\n            4\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Fasilitas_Sekitar_Jalan Raya\"\n        ],\n        \"consequent\": [\n            \"Lokasi_Desa\"\n        ],\n        \"support\": 0.1,\n        \"confidence\": 0.625,\n        \"lift\": 2.2321428571428568,\n        \"antecedent_ids\": [\n            18\n        ],\n        \"consequent_ids\": [\n            16\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Jenis_Tanah_Bebatuan\",\n            \"Fasilitas_Sekitar_Pasar\"\n        ],\n        \"consequent\": [\n            \"Jarak_Ke_Pusat_Kota_Sedang\"\n        ],\n        \"support\": 0.1,\n        \"confidence\": 0.7142857142857143,\n        \"lift\": 1.9841269841269842,\n        \"antecedent_ids\": [\n            2,\n            6\n        ],\n        \"consequent_ids\": [\n            5\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Lokasi_Kota\"\n        ],\n        \"consequent\": [\n            \"Luas_Tanah_Sedang\"\n        ],\n        \"support\": 0.16,\n        \"confidence\": 0.6153846153846154,\n        \"lift\": 1.923076923076923,\n        \"antecedent_ids\": [\n            1\n        ],\n        \"consequent_ids\": [\n            11\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Fasilitas_Sekitar_Jalan Raya\"\n        ],\n        \"consequent\": [\n            \"Luas_Tanah_Kecil\"\n        ],\n        \"support\": 0.1,\n        \"confidence\": 0.625,\n        \"lift\": 1.838235294117647,\n        \"antecedent_ids\": [\n            18\n        ],\n        \"consequent_ids\": [\n            4\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Luas_Tanah_Kecil\",\n            \"Lokasi_Pinggiran\"\n        ],\n        \"consequent\": [\n            \"Jarak_Ke_Pusat_Kota_Dekat\"\n        ],\n        \"support\": 0.1,\n        \"confidence\": 0.625,\n        \"lift\": 1.838235294117647,\n        \"antecedent_ids\": [\n            4,\n            7\n        ],\n        \"consequent_ids\": [\n            14\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Luas_Tanah_Kecil\",\n            \"Jenis_Tanah_Lempung\"\n        ],\n        \"consequent\": [\n            \"Lokasi_Pinggiran\"\n        ],\n        \"support\": 0.1,\n        \"confidence\": 0.8333333333333334,\n        \"lift\": 1.8115942028985508,\n        \"antecedent_ids\": [\n            4,\n            10\n        ],\n        \"consequent_ids\": [\n            7\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Lokasi_Pinggiran\",\n            \"Jenis_Properti_Apartemen\"\n        ],\n        \"consequent\": [\n            \"Jarak_Ke_Pusat_Kota_Sedang\"\n        ],\n        \"support\": 0.1,\n        \"confidence\": 0.625,\n        \"lift\": 1.7361111111111112,\n        \"antecedent_ids\": [\n            7,\n            8\n        ],\n        \"consequent_ids\": [\n            5\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Fasilitas_Sekitar_Pasar\"\n        ],\n        \"consequent\": [\n            \"Jarak_Ke_Pusat_Kota_Sedang\"\n        ],\n        \"support\": 0.16,\n        \"confidence\": 0.6153846153846154,\n        \"lift\": 1.7094017094017093,\n        \"antecedent_ids\": [\n            6\n        ],\n        \"consequent_ids\": [\n            5\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Jarak_Ke_Pusat_Kota_Sedang\",\n            \"Fasilitas_Sekitar_Pasar\"\n        ],\n        \"consequent\": [\n            \"Jenis_Tanah_Bebatuan\"\n        ],\n        \"support\": 0.1,\n        \"confidence\": 0.625,\n        \"lift\": 1.6447368421052633,\n        \"antecedent_ids\": [\n            5,\n            6\n        ],\n        \"consequent_ids\": [\n            2\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Jenis_Properti_Gudang\"\n        ],\n        \"consequent\": [\n            \"Jenis_Tanah_Bebatuan\"\n        ],\n        \"support\": 0.12,\n        \"confidence\": 0.6,\n        \"lift\": 1.5789473684210524,\n        \"antecedent_ids\": [\n            19\n        ],\n        \"consequent_ids\": [\n            2\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Jarak_Ke_Pusat_Kota_Sedang\",\n            \"Luas_Tanah_Besar\"\n        ],\n        \"consequent\": [\n            \"Lokasi_Pinggiran\"\n        ],\n        \"support\": 0.1,\n        \"confidence\": 0.7142857142857143,\n        \"lift\": 1.5527950310559004,\n        \"antecedent_ids\": [\n            5,\n            9\n        ],\n        \"consequent_ids\": [\n            7\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Lokasi_Pinggiran\",\n            \"Jenis_Properti_Apartemen\"\n        ],\n        \"consequent\": [\n            \"Jenis_Tanah_Lempung\"\n        ],\n        \"support\": 0.1,\n        \"confidence\": 0.625,\n        \"lift\": 1.4880952380952384,\n        \"antecedent_ids\": [\n            7,\n            8\n        ],\n        \"consequent_ids\": [\n            10\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Luas_Tanah_Kecil\",\n            \"Lokasi_Pinggiran\"\n        ],\n        \"consequent\": [\n            \"Jenis_Tanah_Lempung\"\n        ],\n        \"support\": 0.1,\n        \"confidence\": 0.625,\n        \"lift\": 1.4880952380952384,\n        \"antecedent_ids\": [\n            4,\n            7\n        ],\n        \"consequent_ids\": [\n            10\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Jarak_Ke_Pusat_Kota_Sedang\",\n            \"Jenis_Properti_Apartemen\"\n        ],\n        \"consequent\": [\n            \"Lokasi_Pinggiran\"\n        ],\n        \"support\": 0.1,\n        \"confidence\": 0.625,\n        \"lift\": 1.358695652173913,\n        \"antecedent_ids\": [\n            5,\n            8\n        ],\n        \"consequent_ids\": [\n            7\n        ]\n    },\n    {\n        \"antecedent\": [\n            \"Jenis_Properti_Apartemen\",\n            \"Jenis_Tanah_Lempung\"\n        ],\n        \"consequent\": [\n            \"Lokasi_Pinggiran\"\n        ],\n        \"support\": 0.1,\n        \"confidence\": 0.625,\n        \"lift\": 1.358695652173913,\n        \"antecedent_ids\": [\n            8,\n            10\n        ],\n        \"consequent_ids\": [\n            7\n        ]\n    }\n]","jumlah_aturan":17,"jumlah_transaksi":50,"created_at":"2025-08-29 16:27:08"}
+ERROR - 2025-08-29 16:27:08 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(174): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:27:08 --> Error dalam simpan(): Unknown column 'jumlah_transaksi' in 'field list'
+ERROR - 2025-08-29 16:27:08 --> Stack trace: #0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#1 C:\laragon\www\apriori\app\Controllers\Analisis.php(174): CodeIgniter\Database\BaseBuilder->insert(Array)
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#4 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#7 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#8 {main}
+DEBUG - 2025-08-29 16:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:29:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:29:17 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:29:17 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:29:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:29:23 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:29:23 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:29:29 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:29:29 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:33:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:33:43 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:33:43 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:33:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:33:53 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:33:53 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:34:37 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:34:37 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:34:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:35:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:35:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-29 16:35:38 --> REDIRECTED ROUTE at http://localhost/apriori/
+DEBUG - 2025-08-29 16:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:35:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:35:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:35:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-29 16:35:48 --> REDIRECTED ROUTE at http://localhost/apriori/
+DEBUG - 2025-08-29 16:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-29 16:35:51 --> REDIRECTED ROUTE at http://localhost/apriori/
+DEBUG - 2025-08-29 16:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:36:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-29 16:36:05 --> REDIRECTED ROUTE at http://localhost/apriori/
+DEBUG - 2025-08-29 16:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-29 16:36:10 --> REDIRECTED ROUTE at http://localhost/apriori/
+DEBUG - 2025-08-29 16:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:36:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-29 16:36:13 --> REDIRECTED ROUTE at http://localhost/apriori/
+DEBUG - 2025-08-29 16:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-29 16:36:25 --> REDIRECTED ROUTE at http://localhost/apriori/
+DEBUG - 2025-08-29 16:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:36:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:37:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-29 16:37:12 --> REDIRECTED ROUTE at http://localhost/apriori/
+DEBUG - 2025-08-29 16:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:38:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:38:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:38:21 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:38:21 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:38:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:38:49 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:38:49 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:38:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:39:58 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:39:58 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'
+DEBUG - 2025-08-29 16:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-29 16:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-29 16:40:31 --> mysqli_sql_exception: Unknown column 'jumlah_transaksi' in 'field list' in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\apriori\app\Controllers\Analisis.php(150): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Analisis->simpan()
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Analisis))
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-29 16:40:31 --> Error saving analysis result: Unknown column 'jumlah_transaksi' in 'field list'

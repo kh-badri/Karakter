@@ -1,0 +1,155 @@
+__ci_last_regenerate|i:1762942225;_ci_previous_url|s:30:"http://localhost/umkm/analisis";id|s:1:"9";username|s:5:"admin";foto|s:35:"1761063392_2a0ed935235082d568a1.png";isLoggedIn|b:1;_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:1:{s:14:"csrf_test_name";s:32:"513cae34ea2e98e390ed28a23d948eb2";}}__ci_vars|a:2:{s:13:"_ci_old_input";s:3:"old";s:5:"error";s:3:"old";}error|s:5181:"Terjadi kesalahan: Gagal parsing hasil Python (bukan JSON). Output: C:\laragon\www\umkm\writable\python/run_analysis_nb.py:68: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+{
+    "status": "success",
+    "analisis": {
+        "probabilitas_prior": {
+            "Stabil": 0.4266666666666667,
+            "Sukses": 0.3333333333333333,
+            "Menurun": 0.24
+        },
+        "probabilitas_likelihood": {
+            "Modal": {
+                "Sedang": {
+                    "Menurun": 0.358974358974359,
+                    "Stabil": 0.3283582089552239,
+                    "Sukses": 0.3584905660377358
+                },
+                "Rendah": {
+                    "Menurun": 0.3076923076923077,
+                    "Stabil": 0.3283582089552239,
+                    "Sukses": 0.18867924528301888
+                },
+                "Tinggi": {
+                    "Menurun": 0.3333333333333333,
+                    "Stabil": 0.34328358208955223,
+                    "Sukses": 0.4528301886792453
+                }
+            },
+            "Strategi_Pemasaran": {
+                "Online": {
+                    "Menurun": 0.1794871794871795,
+                    "Stabil": 0.3582089552238806,
+                    "Sukses": 0.4339622641509434
+                },
+                "Campuran": {
+                    "Menurun": 0.3076923076923077,
+                    "Stabil": 0.373134328358209,
+                    "Sukses": 0.33962264150943394
+                },
+                "Offline": {
+                    "Menurun": 0.5128205128205128,
+                    "Stabil": 0.26865671641791045,
+                    "Sukses": 0.22641509433962265
+                }
+            },
+            "Jenis_UMKM": {
+                "Kuliner": {
+                    "Menurun": 0.225,
+                    "Stabil": 0.16176470588235295,
+                    "Sukses": 0.3148148148148148
+                },
+                "Jasa": {
+                    "Menurun": 0.225,
+                    "Stabil": 0.2647058823529412,
+                    "Sukses": 0.25925925925925924
+                },
+                "Agribisnis": {
+                    "Menurun": 0.225,
+                    "Stabil": 0.3235294117647059,
+                    "Sukses": 0.2777777777777778
+                },
+                "Kerajinan": {
+                    "Menurun": 0.325,
+                    "Stabil": 0.25,
+                    "Sukses": 0.14814814814814814
+                }
+            },
+            "Lama_Usaha": {
+                "Berpengalaman": {
+                    "Menurun": 0.3157894736842105,
+                    "Stabil": 0.3333333333333333,
+                    "Sukses": 0.6923076923076923
+                },
+                "Baru": {
+                    "Menurun": 0.6842105263157895,
+                    "Stabil": 0.6666666666666666,
+                    "Sukses": 0.3076923076923077
+                }
+            },
+            "Lokasi": {
+                "Pemukiman": {
+                    "Menurun": 0.6842105263157895,
+                    "Stabil": 0.4696969696969697,
+                    "Sukses": 0.3076923076923077
+                },
+                "Strategis": {
+                    "Menurun": 0.3157894736842105,
+                    "Stabil": 0.5303030303030303,
+                    "Sukses": 0.6923076923076923
+                }
+            }
+        }
+    },
+    "evaluasi": {
+        "total_data": 150,
+        "data_latih": 120,
+        "data_uji": 30,
+        "accuracy": 0.4666666666666667,
+        "classification_report": {
+            "Menurun": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1-score": 0.0,
+                "support": 3.0
+            },
+            "Stabil": {
+                "precision": 0.5625,
+                "recall": 0.5625,
+                "f1-score": 0.5625,
+                "support": 16.0
+            },
+            "Sukses": {
+                "precision": 0.7142857142857143,
+                "recall": 0.45454545454545453,
+                "f1-score": 0.5555555555555556,
+                "support": 11.0
+            },
+            "accuracy": 0.4666666666666667,
+            "macro avg": {
+                "precision": 0.42559523809523814,
+                "recall": 0.33901515151515155,
+                "f1-score": 0.3726851851851852,
+                "support": 30.0
+            },
+            "weighted avg": {
+                "precision": 0.5619047619047619,
+                "recall": 0.4666666666666667,
+                "f1-score": 0.5037037037037037,
+                "support": 30.0
+            }
+        },
+        "confusion_matrix": [
+            [
+                0,
+                3,
+                0
+            ],
+            [
+                5,
+                9,
+                2
+            ],
+            [
+                2,
+                4,
+                5
+            ]
+        ],
+        "confusion_matrix_labels": [
+            "Menurun",
+            "Stabil",
+            "Sukses"
+        ]
+    }
+}";

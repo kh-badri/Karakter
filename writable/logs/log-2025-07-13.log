@@ -1,0 +1,374 @@
+ERROR - 2025-07-13 09:40:39 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\klasifikasi-app\app\Models\LoginModel.php(15): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\klasifikasi-app\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('admin')
+#8 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#9 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\klasifikasi-app\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\klasifikasi-app\app\Models\LoginModel.php(15): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\klasifikasi-app\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('admin')
+#7 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\klasifikasi-app\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-07-13 09:40:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `login`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\LoginModel.php(15): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-13 09:44:53 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\klasifikasi-app\app\Models\LoginModel.php(15): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\klasifikasi-app\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('admin')
+#8 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#9 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\klasifikasi-app\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\klasifikasi-app\app\Models\LoginModel.php(15): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\klasifikasi-app\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('admin')
+#7 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\klasifikasi-app\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-07-13 09:44:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `login`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\LoginModel.php(15): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-13 09:56:33 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\klasifikasi-app\app\Models\LoginModel.php(15): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\klasifikasi-app\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('admin')
+#8 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#9 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\klasifikasi-app\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\klasifikasi-app\app\Models\LoginModel.php(15): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\klasifikasi-app\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('admin')
+#7 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\klasifikasi-app\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-07-13 09:56:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `login`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\LoginModel.php(15): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-13 09:57:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\klasifikasi-app\app\Models\LoginModel.php(15): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\klasifikasi-app\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('admin')
+#8 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#9 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\klasifikasi-app\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\klasifikasi-app\app\Models\LoginModel.php(15): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\klasifikasi-app\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('admin')
+#7 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\klasifikasi-app\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-07-13 09:57:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `login`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\LoginModel.php(15): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-13 10:00:51 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\klasifikasi-app\app\Models\LoginModel.php(18): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\klasifikasi-app\app\Controllers\Auth.php(22): App\Models\LoginModel->cekLogin('admin', 'admin123')
+#8 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#9 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\klasifikasi-app\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\klasifikasi-app\app\Models\LoginModel.php(18): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\klasifikasi-app\app\Controllers\Auth.php(22): App\Models\LoginModel->cekLogin('admin', 'admin123')
+#7 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\klasifikasi-app\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-07-13 10:00:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `login`
+WHERE `username` = :username:
+AND `password` = :password:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\LoginModel.php(18): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(22): App\Models\LoginModel->cekLogin('admin', 'admin123')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-13 10:00:55 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\klasifikasi-app\app\Models\LoginModel.php(18): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\klasifikasi-app\app\Controllers\Auth.php(22): App\Models\LoginModel->cekLogin('admin', 'sdsd')
+#8 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#9 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\klasifikasi-app\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\klasifikasi-app\app\Models\LoginModel.php(18): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\klasifikasi-app\app\Controllers\Auth.php(22): App\Models\LoginModel->cekLogin('admin', 'sdsd')
+#7 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\klasifikasi-app\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-07-13 10:00:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `login`
+WHERE `username` = :username:
+AND `password` = :password:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\LoginModel.php(18): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(22): App\Models\LoginModel->cekLogin('admin', 'sdsd')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-13 10:03:26 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\klasifikasi-app\app\Models\LoginModel.php(18): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\klasifikasi-app\app\Controllers\Auth.php(22): App\Models\LoginModel->cekLogin('admin', 'admin123')
+#8 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#9 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\klasifikasi-app\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\klasifikasi-app\app\Models\LoginModel.php(18): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\klasifikasi-app\app\Controllers\Auth.php(22): App\Models\LoginModel->cekLogin('admin', 'admin123')
+#7 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\klasifikasi-app\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\klasifikasi-app\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-07-13 10:03:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `login`
+WHERE `username` = :username:
+AND `password` = :password:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\LoginModel.php(18): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(22): App\Models\LoginModel->cekLogin('admin', 'admin123')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

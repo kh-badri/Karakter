@@ -1,0 +1,322 @@
+ERROR - 2025-09-26 07:07:53 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'apriori_db', 3306, '', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\apriori\app\Models\LoginModel.php(22): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\apriori\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('alwi')
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\apriori\app\Models\LoginModel.php(22): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\apriori\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('alwi')
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-09-26 07:07:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `login`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\LoginModel.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('alwi')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-26 07:07:57 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'apriori_db', 3306, '', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\apriori\app\Models\LoginModel.php(22): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\apriori\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('alwi')
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\apriori\app\Models\LoginModel.php(22): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\apriori\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('alwi')
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-09-26 07:07:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `login`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\LoginModel.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('alwi')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-26 07:08:09 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'apriori_db', 3306, '', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\apriori\app\Models\LoginModel.php(22): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\apriori\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('alwi')
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\apriori\app\Models\LoginModel.php(22): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\apriori\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('alwi')
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-09-26 07:08:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `login`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\LoginModel.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('alwi')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-09-26 07:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-26 07:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-26 07:09:13 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'apriori_db', 3306, '', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\apriori\app\Models\LoginModel.php(22): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\apriori\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('alwi')
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\apriori\app\Models\LoginModel.php(22): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\apriori\app\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('alwi')
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-09-26 07:09:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `login`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\LoginModel.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(22): App\Models\LoginModel->getUserByUsername('alwi')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-09-26 07:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-26 07:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-09-26 07:10:44 --> REDIRECTED ROUTE at http://localhost/apriori/
+DEBUG - 2025-09-26 07:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-26 07:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-26 07:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-26 07:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-26 07:15:40 --> Error Apriori hybrid: Gagal parsing hasil Python: Syntax error
+ERROR - 2025-09-26 07:15:45 --> Error Apriori hybrid: Gagal parsing hasil Python: Syntax error
+ERROR - 2025-09-26 07:15:46 --> Error Apriori hybrid: Gagal parsing hasil Python: Syntax error
+ERROR - 2025-09-26 07:20:01 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'apriori_db', 3306, '', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\BaseModel.php(613): CodeIgniter\Model->doFind(true, '8')
+#6 C:\laragon\www\apriori\app\Controllers\Akun.php(20): CodeIgniter\BaseModel->find('8')
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Akun->index()
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Akun))
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\BaseModel.php(613): CodeIgniter\Model->doFind(true, '8')
+#5 C:\laragon\www\apriori\app\Controllers\Akun.php(20): CodeIgniter\BaseModel->find('8')
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Akun->index()
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Akun))
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-09-26 07:20:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: akun]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `login`
+WHERE `login`.`id` = :login.id:', [...], false)
+ 3 SYSTEMPATH\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(613): CodeIgniter\Model->doFind(true, '8')
+ 5 APPPATH\Controllers\Akun.php(20): CodeIgniter\BaseModel->find('8')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Akun->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Akun))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-26 07:20:08 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'apriori_db', 3306, '', 0)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\BaseModel.php(613): CodeIgniter\Model->doFind(true, '8')
+#6 C:\laragon\www\apriori\app\Controllers\Akun.php(20): CodeIgniter\BaseModel->find('8')
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Akun->index()
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Akun))
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\BaseModel.php(613): CodeIgniter\Model->doFind(true, '8')
+#5 C:\laragon\www\apriori\app\Controllers\Akun.php(20): CodeIgniter\BaseModel->find('8')
+#6 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Akun->index()
+#7 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Akun))
+#8 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\apriori\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\apriori\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-09-26 07:20:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: akun]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `login`
+WHERE `login`.`id` = :login.id:', [...], false)
+ 3 SYSTEMPATH\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(613): CodeIgniter\Model->doFind(true, '8')
+ 5 APPPATH\Controllers\Akun.php(20): CodeIgniter\BaseModel->find('8')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Akun->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Akun))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
