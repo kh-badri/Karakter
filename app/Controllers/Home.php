@@ -2,53 +2,28 @@
 
 namespace App\Controllers;
 
-use App\Models\NikahModel;
-use App\Models\HistoryModel;
+use App\Controllers\BaseController;
 
 class Home extends BaseController
 {
-    protected $nikahModel;
-    protected $historyModel;
-
-    public function __construct()
-    {
-        $this->nikahModel = new NikahModel();
-        $this->historyModel = new HistoryModel();
-    }
-
     public function index()
     {
-        // 1. Ambil Statistik
-        $totalData = $this->nikahModel->countAll();
-        $totalHistory = $this->historyModel->countAll();
+        $karakterModel = new \App\Models\KarakterModel();
+        $historyModel = new \App\Models\HistoryModel();
 
-        // Ambil riwayat terakhir untuk ditampilkan di card
-        $lastHistory = $this->historyModel->orderBy('id', 'DESC')->first();
+        // Get total data
+        $totalDataset = $karakterModel->countAllResults();
+        $totalRiwayat = $historyModel->countAllResults();
 
-        // 2. Ambil Data untuk Grafik (Tren Data Aktual)
-        $grafikData = $this->nikahModel->getOrderedData();
-        $labels = [];
-        $values = [];
-
-        foreach ($grafikData as $d) {
-            $dateObj = \DateTime::createFromFormat('!m', $d['bulan']);
-            $labels[] = $dateObj->format('M') . ' ' . $d['tahun'];
-            $values[] = $d['jumlah_nikah'];
-        }
-
-        // 3. Ambil 5 Riwayat Terakhir untuk Tabel Mini
-        $recentHistory = $this->historyModel->orderBy('id', 'DESC')->findAll(5);
+        // Get recent history
+        $recentRiwayat = $historyModel->orderBy('id', 'DESC')->findAll(3);
 
         $data = [
             'title' => 'Dashboard Utama',
             'active_menu' => 'home',
-            'total_data' => $totalData,
-            'total_history' => $totalHistory,
-            'last_prediksi' => $lastHistory ? $lastHistory['hasil_prediksi'] : 0,
-            'last_target' => $lastHistory ? $lastHistory['periode_target'] : '-',
-            'chart_labels' => $labels,
-            'chart_values' => $values,
-            'recent_history' => $recentHistory
+            'total_dataset' => $totalDataset,
+            'total_riwayat' => $totalRiwayat,
+            'recent_riwayat' => $recentRiwayat
         ];
 
         return view('home/index', $data);

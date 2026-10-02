@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Prediksi Nikah KUA</title>
+    <title>Login | Klasifikasi Karakter Siswa</title>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -18,11 +18,13 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'teal-light': '#66D2CE',
-                        'teal-main': '#2DAA9E',
-                        'gray-bg': '#EAEAEA',
-                        'cream-accent': '#E3D2C3',
-                        'danger': '#FF5656',
+                        'color-1': '#CFAB8D',
+                        'color-2': '#D9C4B0',
+                        'color-3': '#ECEEDF',
+                        'color-4': '#BBDCE5',
+                    },
+                    boxShadow: {
+                        'flat': '8px 8px 0px 0px #CFAB8D',
                     }
                 }
             }
@@ -30,9 +32,16 @@
     </script>
 </head>
 
-<body class="bg-gray-bg min-h-screen flex items-center justify-center p-4 lg:p-8">
+<body class="bg-color-3 min-h-screen flex items-center justify-center p-6 font-sans relative overflow-hidden">
 
-    <?php if (session()->getFlashdata('success')) : ?>
+    <!-- Abstract Background Elements (Flat, No Gradient) -->
+    <div class="absolute top-[-10%] left-[-5%] w-96 h-96 bg-color-4 rounded-full mix-blend-multiply opacity-60"></div>
+    <div
+        class="absolute bottom-[-10%] right-[-5%] w-[30rem] h-[30rem] bg-color-2 rounded-full mix-blend-multiply opacity-50">
+    </div>
+    <div class="absolute top-[20%] right-[15%] w-24 h-24 bg-color-1 rounded-lg rotate-12 opacity-40"></div>
+
+    <?php if (session()->getFlashdata('success')): ?>
         <script>
             Swal.fire({
                 icon: 'success',
@@ -40,112 +49,72 @@
                 text: '<?= esc(session()->getFlashdata('success'), 'js') ?>',
                 timer: 2000,
                 showConfirmButton: false,
-                confirmButtonColor: '#2DAA9E'
+                confirmButtonColor: '#CFAB8D'
             });
         </script>
     <?php endif; ?>
 
-    <?php if (session()->getFlashdata('error')) : ?>
+    <?php if (session()->getFlashdata('error')): ?>
         <script>
             Swal.fire({
                 icon: 'error',
-                title: 'Login Gagal',
+                title: 'Gagal',
                 text: '<?= esc(session()->getFlashdata('error'), 'js') ?>',
-                confirmButtonColor: '#2DAA9E'
+                confirmButtonColor: '#CFAB8D'
             });
         </script>
     <?php endif; ?>
 
-    <div class="bg-white rounded-3xl shadow-2xl w-full max-w-5xl overflow-hidden flex flex-col md:flex-row h-auto md:h-[600px] border border-cream-accent/50">
+    <!-- Single Centered Container -->
+    <div class="w-full max-w-sm bg-white p-6 md:p-8 rounded-[1.5rem] shadow-xl relative z-10 border-2 border-white">
 
-        <div class="md:w-1/2 p-8 lg:p-12 flex flex-col justify-center relative">
-
-            <div class="mb-8">
-                <div class="inline-flex items-center gap-2 mb-2 px-3 py-1 rounded-full bg-teal-light/10 text-teal-main text-xs font-bold uppercase tracking-wider">
-                    <span class="w-2 h-2 rounded-full bg-teal-main"></span>
-                    Sistem Prediksi
-                </div>
-                <h1 class="text-3xl lg:text-4xl font-extrabold text-gray-800">Selamat Datang</h1>
-                <p class="text-gray-500 mt-2">Masuk untuk mengelola data pernikahan KUA.</p>
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <div class="w-14 h-14 bg-color-1/10 text-color-1 rounded-full flex items-center justify-center mx-auto mb-4 border border-color-1/20 shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                </svg>
             </div>
-
-            <form action="<?= base_url('/login') ?>" method="post" class="space-y-5">
-                <?= csrf_field() ?>
-
-                <div>
-                    <label class="block text-sm font-bold text-gray-700 mb-2">Username</label>
-                    <div class="relative">
-                        <input type="text" name="username" required
-                            class="w-full pl-10 pr-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-main focus:border-transparent transition-all placeholder-gray-400 font-medium"
-                            placeholder="username">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <label class="block text-sm font-bold text-gray-700 mb-2">Password</label>
-                    <div class="relative">
-                        <input type="password" name="password" required
-                            class="w-full pl-10 pr-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-main focus:border-transparent transition-all placeholder-gray-400 font-medium"
-                            placeholder="••••••••">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <button type="submit"
-                    class="w-full bg-teal-main hover:bg-[#25968a] text-white font-bold py-3.5 rounded-xl shadow-lg shadow-teal-main/30 hover:shadow-teal-main/50 transition-all duration-300 transform hover:-translate-y-0.5 flex justify-center items-center gap-2 mt-4">
-                    <span>Masuk Aplikasi</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-
-                <div class="text-center mt-6">
-                    <p class="text-sm text-gray-500">
-                        Belum terdaftar?
-                        <a href="<?= site_url('register') ?>" class="text-teal-main font-bold hover:underline transition">
-                            Buat Akun
-                        </a>
-                    </p>
-                </div>
-            </form>
-
-            <div class="mt-auto pt-8 text-center text-xs text-gray-400">
-                &copy; <?= date('Y') ?> KUA Tanjung Tiram. All rights reserved.
-            </div>
+            <h1 class="text-2xl font-extrabold text-gray-900 tracking-tight mb-1">Selamat Datang</h1>
+            <p class="text-[11px] text-gray-500 font-medium">Sistem Klasifikasi Karakter Siswa</p>
         </div>
 
-        <div class="hidden md:block md:w-1/2 relative bg-gray-100">
-            <img src="<?= base_url('public/nikah1.png') ?>" alt="Ilustrasi Nikah" class="absolute inset-0 w-full h-full object-cover">
+        <!-- Form -->
+        <form action="<?= base_url('/login') ?>" method="post" class="space-y-6">
+            <?= csrf_field() ?>
 
-            <div class="absolute inset-0 bg-gradient-to-t from-teal-main/90 to-teal-light/70 mix-blend-multiply"></div>
-
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-12 text-white z-10">
-                <div class="bg-white/20 backdrop-blur-md p-4 rounded-full mb-6 border border-white/30 shadow-xl">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                </div>
-
-                <h2 class="text-3xl font-bold mb-4 drop-shadow-md">Prediksi Pernikahan</h2>
-                <p class="text-white/90 text-lg leading-relaxed max-w-sm drop-shadow-sm font-medium">
-                    Sistem informasi untuk meramalkan jumlah pernikahan di masa mendatang menggunakan metode <span class="font-bold text-white underline decoration-cream-accent underline-offset-4">Time Series</span>.
-                </p>
-
-                <div class="flex gap-2 mt-8">
-                    <div class="w-2 h-2 rounded-full bg-white"></div>
-                    <div class="w-2 h-2 rounded-full bg-white/50"></div>
-                    <div class="w-2 h-2 rounded-full bg-white/50"></div>
-                </div>
+            <div>
+                <label class="block text-xs font-bold text-gray-700 mb-1.5">Username</label>
+                <input type="text" name="username" required
+                    class="w-full px-4 py-3 bg-color-3/30 border-2 border-transparent rounded-lg text-sm text-gray-800 focus:outline-none focus:border-color-1 focus:bg-white transition-all font-medium placeholder-gray-400"
+                    placeholder="Masukkan username">
             </div>
+
+            <div>
+                <label class="block text-xs font-bold text-gray-700 mb-1.5">Password</label>
+                <input type="password" name="password" required
+                    class="w-full px-4 py-3 bg-color-3/30 border-2 border-transparent rounded-lg text-sm text-gray-800 focus:outline-none focus:border-color-1 focus:bg-white transition-all font-medium placeholder-gray-400"
+                    placeholder="••••••••">
+            </div>
+
+            <button type="submit"
+                class="w-full bg-color-1 hover:bg-[#b89578] text-white font-bold py-3 rounded-lg transition-colors flex justify-center items-center gap-2 mt-4 text-sm shadow-sm shadow-color-1/30">
+                Masuk ke Dashboard
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+        </form>
+
+        <!-- Footer -->
+        <div class="mt-8 text-center">
+            <p class="text-sm text-gray-500 font-medium">
+                Belum memiliki akses?
+                <a href="<?= site_url('register') ?>"
+                    class="text-color-1 font-bold hover:underline transition-colors ml-1">Buat Akun</a>
+            </p>
         </div>
 
     </div>

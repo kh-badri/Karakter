@@ -1,136 +1,157 @@
-<?php helper('form'); ?>
 <?= $this->extend('layout/layout'); ?>
 <?= $this->section('content'); ?>
 
-<div class="min-h-screen bg-[#EAEAEA] py-4 px-4 font-sans text-gray-800">
-    <div class="container mx-auto max-w-7xl">
-
-        <div class="flex flex-col md:flex-row justify-between items-end mb-8 gap-4">
-            <div>
-                <h1 class="text-3xl font-extrabold text-[#2DAA9E] tracking-tight"><?= $title ?></h1>
-                <p class="text-gray-600 mt-1 font-medium">Arsip hasil perhitungan peramalan nikah.</p>
+<div class="max-w-7xl mx-auto font-sans text-gray-800">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+        <div>
+            <div class="flex items-center gap-2 mb-1">
+                <span class="px-2 py-0.5 bg-color-1/10 text-color-1 rounded text-[10px] font-bold uppercase tracking-wider">
+                    Manajemen Data
+                </span>
             </div>
-
-            <div class="bg-white border-l-4 border-[#2DAA9E] px-6 py-3 rounded shadow-sm flex items-center gap-4">
-                <div class="text-right">
-                    <span class="block text-xs font-bold uppercase text-gray-400">Total Arsip</span>
-                    <span class="text-2xl font-black text-[#2DAA9E]"><?= count($riwayat) ?></span>
-                </div>
-                <div class="p-2 bg-[#E3D2C3]/30 rounded-lg text-[#2DAA9E]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                </div>
-            </div>
+            <h1 class="text-xl md:text-2xl font-extrabold text-gray-800 tracking-tight">
+                Riwayat Hasil <span class="text-transparent bg-clip-text bg-gradient-to-r from-color-1 to-[#9c7d63]">Klasifikasi</span>
+            </h1>
+            <p class="text-xs text-gray-500 font-medium mt-1">Data hasil perhitungan klasifikasi karakter siswa yang telah disimpan.</p>
         </div>
-
-        <?php if (session()->getFlashdata('success')) : ?>
-            <div class="auto-dismiss-alert bg-[#66D2CE]/30 border-l-4 border-[#2DAA9E] text-[#2DAA9E] px-4 py-3 rounded shadow-sm mb-6 flex items-center gap-3">
-                <span class="font-bold"><?= session()->getFlashdata('success') ?></span>
-            </div>
+        
+        <?php if (!empty($riwayat)) : ?>
+            <button onclick="confirmHapusSemua()" class="bg-red-50 hover:bg-red-100 text-red-600 border border-red-200 px-3 py-1.5 rounded-md text-xs font-bold shadow-sm transition-colors flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                </svg>
+                Bersihkan Riwayat
+            </button>
         <?php endif; ?>
+    </div>
 
-        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-[#E3D2C3]/50">
-            <div class="px-8 py-5 bg-white border-b-2 border-[#EAEAEA] flex justify-between items-center">
-                <h3 class="font-bold text-gray-800 flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#2DAA9E]" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd" />
-                    </svg>
-                    Daftar Riwayat
-                </h3>
-                <?php if (!empty($riwayat)) : ?>
-                    <form action="<?= base_url('history/hapus-semua') ?>" method="get" onsubmit="return confirm('Hapus SEMUA riwayat?');">
-                        <button type="submit" class="text-xs font-bold text-red-500 hover:text-red-700 hover:bg-red-50 px-3 py-2 rounded transition-colors uppercase tracking-wider">
-                            Hapus Semua
-                        </button>
-                    </form>
-                <?php endif; ?>
+    <!-- Flash Messages -->
+    <?php if (session()->getFlashdata('success')) : ?>
+        <div class="bg-green-50 border-l-4 border-green-500 p-3 rounded-lg mb-4 flex items-center gap-2 shadow-sm">
+            <div class="bg-green-100 p-1 rounded-full text-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
             </div>
+            <p class="text-xs font-bold text-green-800"><?= session()->getFlashdata('success') ?></p>
+        </div>
+    <?php endif; ?>
 
-            <div class="overflow-x-auto h-[600px] custom-scrollbar">
-                <table class="w-full text-left border-collapse relative">
-                    <thead class="sticky top-0 z-10 shadow-sm">
-                        <tr class="bg-[#2DAA9E] text-white uppercase text-xs font-bold tracking-wider">
-                            <th class="p-5 text-center w-16">No</th>
-                            <th class="p-5">Waktu Simpan</th>
-                            <th class="p-5">Target Periode</th>
-                            <th class="p-5 text-center">Alpha</th>
-                            <th class="p-5 text-right">Hasil (Ft+1)</th>
-                            <th class="p-5 text-center">MAPE</th>
-                            <th class="p-5 text-center">Akurasi</th>
-                            <th class="p-5 text-center w-32 bg-[#1f7a70]">Opsi</th>
+    <!-- Table Card -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-gray-50 border-b border-gray-100">
+                        <th class="px-4 py-3 text-[10px] font-extrabold text-gray-500 uppercase tracking-widest w-12 text-center">No</th>
+                        <th class="px-4 py-3 text-[10px] font-extrabold text-gray-500 uppercase tracking-widest">Waktu Simpan</th>
+                        <th class="px-4 py-3 text-[10px] font-extrabold text-gray-500 uppercase tracking-widest">Nama Siswa</th>
+                        <th class="px-4 py-3 text-[10px] font-extrabold text-gray-500 uppercase tracking-widest text-center">Data 6 Atribut (1-5)</th>
+                        <th class="px-4 py-3 text-[10px] font-extrabold text-gray-500 uppercase tracking-widest text-center border-l border-gray-100">Hasil NB</th>
+                        <th class="px-4 py-3 text-[10px] font-extrabold text-gray-500 uppercase tracking-widest text-center">Hasil RF</th>
+                        <th class="px-4 py-3 text-[10px] font-extrabold text-gray-500 uppercase tracking-widest text-right">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-50">
+                    <?php if (empty($riwayat)) : ?>
+                        <tr>
+                            <td colspan="7" class="px-4 py-12 text-center">
+                                <div class="flex flex-col items-center justify-center text-gray-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-3 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                                    </svg>
+                                    <p class="text-sm font-bold text-gray-500">Belum Ada Riwayat Tersimpan</p>
+                                    <p class="text-xs text-gray-400 mt-1">Lakukan klasifikasi lalu klik tombol "Simpan Hasil".</p>
+                                </div>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody class="text-gray-700 font-medium text-sm">
-                        <?php if (empty($riwayat)) : ?>
-                            <tr>
-                                <td colspan="8" class="p-16 text-center text-gray-400 bg-[#EAEAEA]/30">Belum ada riwayat tersimpan.</td>
+                    <?php else : ?>
+                        <?php $no = 1; foreach ($riwayat as $row) : ?>
+                            <tr class="hover:bg-gray-50/50 transition-colors">
+                                <td class="px-4 py-3 text-xs font-bold text-gray-400 text-center"><?= $no++ ?></td>
+                                <td class="px-4 py-3 text-xs text-gray-600 font-medium">
+                                    <?= date('d M Y', strtotime($row['tanggal_simpan'])) ?><br>
+                                    <span class="text-[10px] text-gray-400"><?= date('H:i', strtotime($row['tanggal_simpan'])) ?> WIB</span>
+                                </td>
+                                <td class="px-4 py-3 text-xs font-extrabold text-gray-800">
+                                    <?= esc($row['nama_siswa']) ?>
+                                </td>
+                                <td class="px-4 py-3 text-[10px] text-gray-500 font-mono text-center">
+                                    <span title="Sosial"><?= $row['bersosialisasi'] ?></span> -
+                                    <span title="Pendapat"><?= $row['berpendapat'] ?></span> -
+                                    <span title="Emosi"><?= $row['kestabilan_emosi'] ?></span> -
+                                    <span title="Disiplin"><?= $row['kedisiplinan'] ?></span> -
+                                    <span title="Peduli"><?= $row['kepedulian'] ?></span> -
+                                    <span title="Bersih"><?= $row['kebersihan'] ?></span>
+                                </td>
+                                <td class="px-4 py-3 text-xs font-bold text-center border-l border-gray-100">
+                                    <span class="px-2 py-0.5 bg-blue-50 text-blue-700 rounded border border-blue-100">
+                                        <?= esc($row['hasil_nb']) ?>
+                                    </span>
+                                </td>
+                                <td class="px-4 py-3 text-xs font-bold text-center">
+                                    <span class="px-2 py-0.5 bg-green-50 text-green-700 rounded border border-green-100">
+                                        <?= esc($row['hasil_rf']) ?>
+                                    </span>
+                                </td>
+                                <td class="px-4 py-3 text-right">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <a href="<?= base_url('history/detail/' . $row['id']) ?>" class="p-1.5 text-gray-400 hover:text-blue-500 hover:bg-blue-50 rounded-md transition-colors inline-flex" title="Lihat Detail Klasifikasi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                            </svg>
+                                        </a>
+                                        <button onclick="confirmDelete(<?= $row['id'] ?>)" class="p-1.5 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-md transition-colors inline-flex" title="Hapus Riwayat">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
                             </tr>
-                        <?php else : ?>
-                            <?php foreach ($riwayat as $i => $row) : ?>
-                                <tr class="border-b border-[#EAEAEA] hover:bg-[#66D2CE]/10 transition-colors">
-                                    <td class="p-5 text-center text-[#2DAA9E] font-bold"><?= $i + 1 ?></td>
-                                    <td class="p-5">
-                                        <div class="font-bold"><?= date('d M Y', strtotime($row['tanggal_simpan'])) ?></div>
-                                        <div class="text-xs text-gray-500"><?= date('H:i', strtotime($row['tanggal_simpan'])) ?> WIB</div>
-                                    </td>
-                                    <td class="p-5">
-                                        <span class="bg-[#E3D2C3]/40 px-3 py-1 rounded-md font-bold border border-[#E3D2C3]"><?= $row['periode_target'] ?></span>
-                                    </td>
-                                    <td class="p-5 text-center font-bold text-gray-600"><?= $row['alpha'] ?></td>
-                                    <td class="p-5 text-right">
-                                        <span class="text-lg font-black text-[#2DAA9E]"><?= $row['hasil_prediksi'] ?></span>
-                                    </td>
-                                    <td class="p-5 text-center">
-                                        <?php $mape = $row['mape'];
-                                        $bg = $mape < 20 ? 'bg-green-100 text-green-700' : ($mape < 50 ? 'bg-yellow-100 text-yellow-700' : 'bg-red-100 text-red-700'); ?>
-                                        <span class="px-2 py-1 rounded font-bold text-xs <?= $bg ?>"><?= number_format($mape, 2) ?>%</span>
-                                    </td>
-                                    <td class="p-5 text-center font-bold"><?= number_format($row['akurasi'], 2) ?>%</td>
-                                    <td class="p-5 text-center flex justify-center gap-2">
-                                        <a href="<?= base_url('history/detail/' . $row['id']) ?>" class="bg-[#2DAA9E] text-white p-2 rounded-lg hover:bg-[#1f7a70] transition-colors shadow-sm" title="Lihat Detail">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                                                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
-                                            </svg>
-                                        </a>
-                                        <a href="<?= base_url('history/delete/' . $row['id']) ?>" onclick="return confirm('Hapus?');" class="bg-white border border-gray-200 text-gray-400 p-2 rounded-lg hover:text-red-500 hover:bg-red-50 transition-colors shadow-sm" title="Hapus">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
-                                            </svg>
-                                        </a>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                    </tbody>
-                </table>
-            </div>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
 
-<style>
-    .custom-scrollbar::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-    }
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+function confirmDelete(id) {
+    Swal.fire({
+        title: 'Hapus Riwayat?',
+        text: "Data yang dihapus tidak bisa dikembalikan!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#ef4444',
+        cancelButtonColor: '#9ca3af',
+        confirmButtonText: 'Ya, Hapus!',
+        cancelButtonText: 'Batal'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = '<?= base_url('history/delete/') ?>' + id;
+        }
+    })
+}
 
-    .custom-scrollbar::-webkit-scrollbar-track {
-        background: #E3D2C3;
-        border-radius: 0 0 8px 0;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-        background-color: #2DAA9E;
-        border-radius: 10px;
-        border: 2px solid #E3D2C3;
-    }
-
-    .custom-scrollbar {
-        scrollbar-width: thin;
-        scrollbar-color: #2DAA9E #E3D2C3;
-    }
-</style>
+function confirmHapusSemua() {
+    Swal.fire({
+        title: 'Bersihkan Semua Riwayat?',
+        text: "Seluruh data riwayat klasifikasi akan dihapus permanen!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#ef4444',
+        cancelButtonColor: '#9ca3af',
+        confirmButtonText: 'Ya, Bersihkan!',
+        cancelButtonText: 'Batal'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = '<?= base_url('history/hapus-semua') ?>';
+        }
+    })
+}
+</script>
 
 <?= $this->endSection(); ?>

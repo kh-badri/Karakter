@@ -18,23 +18,27 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->post('akun/update_profil', 'Akun::updateProfil');
     $routes->post('akun/update_sandi', 'Akun::updateSandi');
 
-    $routes->get('/data-nikah', 'DataNikah::index');
-    $routes->post('/data-nikah/save', 'DataNikah::save');
-    $routes->post('/data-nikah/upload', 'DataNikah::upload');
-    $routes->get('/data-nikah/hapus-semua', 'DataNikah::hapusSemua');
-    $routes->get('/data-nikah/delete/(:num)', 'DataNikah::delete/$1');
+    // --- RUTE DATA KARAKTER (Dataset) ---
+    $routes->get('/data-karakter', 'DataKarakter::index');
+    $routes->post('/data-karakter/save', 'DataKarakter::save');
+    
+    // [BARU] Rute untuk Update/Edit Data
+    $routes->post('/data-karakter/update/(:num)', 'DataKarakter::update/$1'); 
+    
+    $routes->post('/data-karakter/upload', 'DataKarakter::upload');
+    $routes->get('/data-karakter/hapus-semua', 'DataKarakter::hapusSemua');
+    $routes->get('/data-karakter/delete/(:num)', 'DataKarakter::delete/$1');
 
-    $routes->get('/prediksi', 'Prediksi::index');
-    $routes->post('/prediksi/proses', 'Prediksi::proses');
-    $routes->post('/prediksi/simpan', 'Prediksi::simpan');
+    // --- RUTE KLASIFIKASI ---
+    $routes->get('/klasifikasi', 'Klasifikasi::index');
+    $routes->post('/klasifikasi/proses', 'Klasifikasi::proses');
+    $routes->post('/klasifikasi/simpan', 'Klasifikasi::simpan');
 
+    // --- RUTE HISTORY ---
     $routes->get('/history', 'History::index');
     $routes->get('/history/delete/(:num)', 'History::delete/$1');
     $routes->get('/history/hapus-semua', 'History::hapusSemua');
     $routes->get('/history/detail/(:num)', 'History::detail/$1');
-
-
-    // --- RUTE HISTORY ---
 
 });
 
@@ -49,4 +53,4 @@ $routes->group('', ['filter' => 'guest'], function ($routes) {
 // --- RUTE AKSI PUBLIK ---
 $routes->post('login', 'Auth::login');
 $routes->post('register', 'Auth::processRegister');
-$routes->get('logout', 'Auth::logout'); // Pastikan Auth::logout menggunakan GET atau sesuaikan
+$routes->get('logout', 'Auth::logout');

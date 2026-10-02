@@ -6,7 +6,11 @@ use CodeIgniter\Model;
 
 class HistoryModel extends Model
 {
-    protected $table            = 'history_prediksi';
+    protected $table            = 'history_klasifikasi';
     protected $primaryKey       = 'id';
-    protected $allowedFields = ['alpha', 'periode_target', 'hasil_prediksi', 'mape', 'akurasi', 'tanggal_simpan', 'detail_json'];
+    protected $allowedFields = [
+        'nama_siswa', 'bersosialisasi', 'berpendapat', 
+        'kestabilan_emosi', 'kedisiplinan', 'kepedulian', 
+        'kebersihan', 'hasil_nb', 'hasil_rf', 'tanggal_simpan'
+    ];
 }

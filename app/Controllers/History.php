@@ -17,7 +17,7 @@ class History extends BaseController
     public function index()
     {
         $data = [
-            'title'   => 'Riwayat Prediksi',
+            'title'   => 'Riwayat Hasil Klasifikasi',
             'active_menu' => 'history',
             'riwayat' => $this->historyModel->orderBy('id', 'DESC')->findAll()
         ];
@@ -32,37 +32,26 @@ class History extends BaseController
             return redirect()->to('/history')->with('error', 'Data tidak ditemukan.');
         }
 
-        // Decode JSON kembali menjadi Array
-        $hasil_tabel = json_decode($riwayat['detail_json'], true);
+        // Kita gunakan ulang fungsi klasifikasi untuk menjabarkan rinciannya
+        $klasifikasi = new \App\Controllers\Klasifikasi();
+        
+        // Load KarakterModel manual karena di-load di base controller Klasifikasi
+        $db = \Config\Database::connect();
+        $dataset = $db->table('data_karakter')->get()->getResultArray();
 
-        // Siapkan data untuk Chart
-        $chart_labels = [];
-        $chart_aktual = [];
-        $chart_prediksi = [];
-
-        if ($hasil_tabel) {
-            foreach ($hasil_tabel as $row) {
-                $chart_labels[] = $row['bulan'] . '-' . $row['tahun'];
-                $chart_aktual[] = $row['aktual'];
-                $chart_prediksi[] = $row['prediksi'];
-            }
-        }
+        $nb_results = $klasifikasi->calculateNaiveBayes($dataset, $riwayat);
+        $rf_results = $klasifikasi->calculateRandomForest($dataset, $riwayat, 5);
 
         $data = [
-            'title'          => 'Detail Riwayat',
-            'alpha'          => $riwayat['alpha'],
-            'periode_target' => $riwayat['periode_target'],
-            'prediksi_next'  => $riwayat['hasil_prediksi'],
-            'mape'           => $riwayat['mape'],
-            'akurasi'        => $riwayat['akurasi'],
-            'tanggal_simpan' => $riwayat['tanggal_simpan'],
-            'hasil_tabel'    => $hasil_tabel,
-            'chart_labels'   => $chart_labels,
-            'chart_aktual'   => $chart_aktual,
-            'chart_prediksi' => $chart_prediksi
+            'title'          => 'Detail Riwayat Klasifikasi',
+            'active_menu'    => 'history',
+            'input'          => $riwayat,
+            'nb_results'     => $nb_results,
+            'rf_results'     => $rf_results,
+            'is_history'     => true
         ];
 
-        return view('history/detail', $data);
+        return view('klasifikasi/hasil', $data);
     }
 
     public function delete($id)

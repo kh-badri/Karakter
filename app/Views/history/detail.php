@@ -9,7 +9,7 @@
         <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
             <div>
                 <div class="flex items-center gap-2 mb-1">
-                    <span class="text-gray-500 font-bold text-sm uppercase tracking-wide">Detail Riwayat</span>
+                    <span class="text-gray-500 font-bold text-sm uppercase tracking-wide">Detail History</span>
                     <span class="text-gray-400">|</span>
                     <span class="text-gray-500 text-sm"><?= date('d F Y H:i', strtotime($tanggal_simpan)) ?></span>
                 </div>
@@ -100,7 +100,7 @@
                             <?php endforeach; ?>
                         <?php else : ?>
                             <tr>
-                                <td colspan="5" class="p-8 text-center text-gray-400">Detail data tidak tersedia untuk riwayat ini.</td>
+                                <td colspan="5" class="p-8 text-center text-gray-400">Detail data tidak tersedia untuk history ini.</td>
                             </tr>
                         <?php endif; ?>
                     </tbody>

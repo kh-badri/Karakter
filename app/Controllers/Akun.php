@@ -13,11 +13,17 @@ class Akun extends BaseController
     {
         $model = new LoginModel();
         $userId = session()->get('id');
+        $user = $model->find($userId);
+
+        if (!$user) {
+            session()->destroy();
+            return redirect()->to('/login')->with('error', 'Sesi tidak valid atau pengguna tidak ditemukan. Silakan masuk kembali.');
+        }
 
         $data = [
             'title'       => 'Halaman Akun',
             'active_menu' => 'akun', // Untuk menu aktif di sidebar
-            'user'        => $model->find($userId)
+            'user'        => $user
         ];
         return view('akun/index', $data);
     }
@@ -31,6 +37,11 @@ class Akun extends BaseController
         $userId = session()->get('id');
         $user = $model->find($userId);
 
+        if (!$user) {
+            session()->destroy();
+            return redirect()->to('/login')->with('error', 'Sesi tidak valid.');
+        }
+
         // Aturan validasi untuk nama dan email
         $rules = [
             'nama_lengkap' => 'required|min_length[3]',
@@ -40,7 +51,7 @@ class Akun extends BaseController
         // Aturan validasi tambahan jika ada file foto yang di-upload
         $foto = $this->request->getFile('foto');
         if ($foto->isValid() && !$foto->hasMoved()) {
-            $rules['foto'] = 'max_size[foto,1024]|is_image[foto]|mime_in[foto,image/jpg,image/jpeg,image/png]';
+            $rules['foto'] = 'max_size[foto,1024]|is_image[foto]|mime_in[foto,image/jpg,image/jpeg,image/png,image/webp]';
         }
 
         if (!$this->validate($rules)) {
@@ -65,6 +76,17 @@ class Akun extends BaseController
         }
 
         $model->save($dataToSave);
+
+        // Perbarui data session agar langsung berubah di tampilan (sidebar dll)
+        $sessionData = [
+            'nama_lengkap' => $dataToSave['nama_lengkap'],
+            'email'        => $dataToSave['email'],
+        ];
+        if (isset($dataToSave['foto'])) {
+            $sessionData['foto'] = $dataToSave['foto'];
+        }
+        session()->set($sessionData);
+
         session()->setFlashdata('success', 'Profil berhasil diperbarui.');
         return redirect()->to('/akun');
     }
@@ -77,6 +99,11 @@ class Akun extends BaseController
         $model = new LoginModel();
         $userId = session()->get('id');
         $user = $model->find($userId);
+
+        if (!$user) {
+            session()->destroy();
+            return redirect()->to('/login')->with('error', 'Sesi tidak valid.');
+        }
 
         // Aturan validasi untuk password
         $rules = [
