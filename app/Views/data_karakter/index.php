@@ -117,22 +117,22 @@
         <!-- THE DATA TABLE -->
         <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
             <div class="overflow-x-auto h-[600px] custom-scrollbar">
-                <table class="w-full text-left border-collapse min-w-[1000px] text-xs">
-                    <thead class="sticky top-0 z-10 bg-white/90 backdrop-blur-md">
-                        <tr>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 w-12">No</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 whitespace-nowrap">Nama Siswa</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center whitespace-nowrap">Bersosialisasi</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center whitespace-nowrap">Mengeluarkan Pendapat</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center whitespace-nowrap">Kestabilan Emosi</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center whitespace-nowrap">Kedisiplinan</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center whitespace-nowrap">Kepedulian</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center whitespace-nowrap">Kebersihan</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center whitespace-nowrap">Label Karakter</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center w-24 whitespace-nowrap">Aksi</th>
+                <table class="w-full text-left border-collapse text-xs">
+                    <thead class="sticky top-0 z-10 bg-white/95 backdrop-blur-md shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
+                        <tr class="text-[10px] text-gray-500 uppercase tracking-wider">
+                            <th class="px-2 py-2.5 font-extrabold border-b border-gray-100 text-center w-8">No</th>
+                            <th class="px-2.5 py-2.5 font-extrabold border-b border-gray-100 whitespace-nowrap">Nama Siswa</th>
+                            <th class="px-2 py-2.5 font-extrabold border-b border-gray-100 text-center leading-tight">Bersosialisasi</th>
+                            <th class="px-2 py-2.5 font-extrabold border-b border-gray-100 text-center leading-tight">Mengeluarkan<br>Pendapat</th>
+                            <th class="px-2 py-2.5 font-extrabold border-b border-gray-100 text-center leading-tight">Kestabilan<br>Emosi</th>
+                            <th class="px-2 py-2.5 font-extrabold border-b border-gray-100 text-center leading-tight">Kedisiplinan</th>
+                            <th class="px-2 py-2.5 font-extrabold border-b border-gray-100 text-center leading-tight">Kepedulian</th>
+                            <th class="px-2 py-2.5 font-extrabold border-b border-gray-100 text-center leading-tight">Kebersihan</th>
+                            <th class="px-2 py-2.5 font-extrabold border-b border-gray-100 text-center leading-tight">Label Karakter</th>
+                            <th class="px-2 py-2.5 font-extrabold border-b border-gray-100 text-center w-16">Aksi</th>
                         </tr>
                     </thead>
-                    <tbody class="text-gray-800">
+                    <tbody class="text-gray-800 divide-y divide-gray-50 text-[11px]">
                         <?php if (empty($dataset)) : ?>
                             <tr>
                                 <td colspan="10" class="p-16 text-center">
@@ -141,36 +141,36 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
                                         </svg>
                                     </div>
-                                    <p class="text-lg font-bold text-gray-800 mb-1">Belum ada data</p>
-                                    <p class="text-gray-500 font-medium">Tambahkan data manual atau upload file CSV.</p>
+                                    <p class="text-base font-bold text-gray-800 mb-1">Belum ada data</p>
+                                    <p class="text-xs text-gray-500 font-medium">Tambahkan data manual atau upload file CSV.</p>
                                 </td>
                             </tr>
                         <?php else : ?>
                             <?php foreach ($dataset as $i => $d) : ?>
                                 <tr class="hover:bg-color-3/30 transition-colors">
-                                    <td class="px-4 py-3 border-b border-gray-50 text-gray-400 font-medium"><?= $i + 1 ?></td>
-                                    <td class="px-4 py-3 border-b border-gray-50 font-bold text-gray-800 text-sm"><?= esc($d['nama_siswa']) ?></td>
-                                    <td class="px-4 py-3 border-b border-gray-50 text-center font-semibold text-gray-600"><?= $d['bersosialisasi'] ?></td>
-                                    <td class="px-4 py-3 border-b border-gray-50 text-center font-semibold text-gray-600"><?= $d['berpendapat'] ?></td>
-                                    <td class="px-4 py-3 border-b border-gray-50 text-center font-semibold text-gray-600"><?= $d['kestabilan_emosi'] ?></td>
-                                    <td class="px-4 py-3 border-b border-gray-50 text-center font-semibold text-gray-600"><?= $d['kedisiplinan'] ?></td>
-                                    <td class="px-4 py-3 border-b border-gray-50 text-center font-semibold text-gray-600"><?= $d['kepedulian'] ?></td>
-                                    <td class="px-4 py-3 border-b border-gray-50 text-center font-semibold text-gray-600"><?= $d['kebersihan'] ?></td>
-                                    <td class="px-4 py-3 border-b border-gray-50 text-center">
-                                        <span class="inline-flex items-center px-2.5 py-1 rounded-md text-[10px] font-bold bg-gray-100 text-gray-700">
+                                    <td class="px-2 py-2 text-center text-gray-400 font-medium"><?= $i + 1 ?></td>
+                                    <td class="px-2.5 py-2 font-bold text-gray-800 text-xs truncate max-w-[120px]"><?= esc($d['nama_siswa']) ?></td>
+                                    <td class="px-2 py-2 text-center font-bold text-gray-700"><?= $d['bersosialisasi'] ?></td>
+                                    <td class="px-2 py-2 text-center font-bold text-gray-700"><?= $d['berpendapat'] ?></td>
+                                    <td class="px-2 py-2 text-center font-bold text-gray-700"><?= $d['kestabilan_emosi'] ?></td>
+                                    <td class="px-2 py-2 text-center font-bold text-gray-700"><?= $d['kedisiplinan'] ?></td>
+                                    <td class="px-2 py-2 text-center font-bold text-gray-700"><?= $d['kepedulian'] ?></td>
+                                    <td class="px-2 py-2 text-center font-bold text-gray-700"><?= $d['kebersihan'] ?></td>
+                                    <td class="px-2 py-2 text-center">
+                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-gray-100 text-gray-700 whitespace-nowrap">
                                             <?= esc($d['label_karakter']) ?>
                                         </span>
                                     </td>
-                                    <td class="px-4 py-3 border-b border-gray-50 text-center">
-                                        <div class="flex items-center justify-center gap-2">
-                                            <button onclick='openEditModal(<?= json_encode($d) ?>)' class="p-1 text-gray-400 hover:text-color-1 transition-colors bg-white hover:bg-gray-50 rounded border border-transparent hover:border-gray-200" title="Edit">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <td class="px-2 py-2 text-center">
+                                        <div class="flex items-center justify-center gap-1.5">
+                                            <button onclick='openEditModal(<?= json_encode($d) ?>)' class="p-1 text-gray-400 hover:text-color-1 transition-colors bg-white hover:bg-gray-50 rounded border border-gray-200" title="Edit">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor">
                                                     <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
                                                 </svg>
                                             </button>
                                             
-                                            <a href="<?= base_url('data-karakter/delete/' . $d['id']) ?>" onclick="return confirm('Hapus data siswa ini?');" class="p-1 text-gray-400 hover:text-danger transition-colors bg-white hover:bg-red-50 rounded border border-transparent hover:border-red-100" title="Hapus">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                            <a href="<?= base_url('data-karakter/delete/' . $d['id']) ?>" onclick="return confirm('Hapus data siswa ini?');" class="p-1 text-gray-400 hover:text-danger transition-colors bg-white hover:bg-red-50 rounded border border-gray-200 hover:border-red-100" title="Hapus">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor">
                                                     <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
                                                 </svg>
                                             </a>
