@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= esc($title ?? 'Klasifikasi Karakteristik Siswa') ?></title>
+    <title><?= esc($title ?? 'APLIKASI KLASIFIKASI KARAKTERISTIK KEPRIBADIAN SISWA') ?></title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -99,14 +99,13 @@
     <div
         class="md:hidden flex items-center justify-between bg-white border-b-2 border-white p-3 sticky top-0 z-40 shadow-sm">
         <div class="flex items-center gap-2">
-            <div class="w-7 h-7 bg-color-1 text-white rounded-md flex items-center justify-center">
+            <div class="w-7 h-7 bg-color-1 text-white rounded-md flex items-center justify-center shrink-0">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
                 </svg>
             </div>
-            <span class="text-sm font-extrabold text-gray-900 tracking-tight">Karakter<span
-                    class="text-color-1">Siswa</span></span>
+            <span class="text-[11px] font-black text-black tracking-tight leading-tight uppercase">APLIKASI KLASIFIKASI KARAKTERISTIK KEPRIBADIAN SISWA</span>
         </div>
         <button @click="sidebarOpen = !sidebarOpen" class="text-gray-600 hover:text-color-1 focus:outline-none">
             <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -127,7 +126,7 @@
         <aside :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full'"
             class="fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-gray-100 transition-transform duration-300 ease-in-out md:relative md:translate-x-0 flex flex-col shadow-xl md:shadow-none">
 
-            <div class="flex items-center gap-3 px-6 h-20 border-b border-color-3/50 bg-white">
+            <div class="flex items-center gap-3 px-5 h-20 border-b border-color-3/50 bg-white">
                 <div class="w-10 h-10 shrink-0 flex items-center justify-center bg-color-1/10 text-color-1 rounded-xl">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="2">
@@ -136,10 +135,9 @@
                     </svg>
                 </div>
                 <div class="overflow-hidden">
-                    <h1 class="text-[13px] font-extrabold text-gray-900 leading-tight">Aplikasi Data Mining</h1>
-                    <p class="text-[9px] text-color-1 uppercase tracking-widest font-bold mt-1 leading-normal">
-                        Klasifikasi Karakter Siswa
-                    </p>
+                    <h1 class="text-[11px] font-black text-black leading-snug uppercase tracking-tight">
+                        APLIKASI KLASIFIKASI KARAKTERISTIK KEPRIBADIAN SISWA
+                    </h1>
                 </div>
             </div>
 
@@ -223,7 +221,7 @@
                 <?= $this->renderSection('content') ?>
 
                 <footer class="mt-8 py-4 text-center text-xs text-gray-500 font-medium">
-                    <p>&copy; <?= date('Y') ?> <span class="text-color-1 font-bold">Data Mining Siswa</span>. All rights
+                    <p>&copy; <?= date('Y') ?> <span class="text-black font-bold">APLIKASI KLASIFIKASI KARAKTERISTIK KEPRIBADIAN SISWA</span>. All rights
                         reserved.</p>
                 </footer>
             </div>

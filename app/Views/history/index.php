@@ -76,12 +76,12 @@
                                     <?= esc($row['nama_siswa']) ?>
                                 </td>
                                 <td class="px-4 py-3 text-[10px] text-gray-500 font-mono text-center">
-                                    <span title="Sosial"><?= $row['bersosialisasi'] ?></span> -
-                                    <span title="Pendapat"><?= $row['berpendapat'] ?></span> -
-                                    <span title="Emosi"><?= $row['kestabilan_emosi'] ?></span> -
-                                    <span title="Disiplin"><?= $row['kedisiplinan'] ?></span> -
-                                    <span title="Peduli"><?= $row['kepedulian'] ?></span> -
-                                    <span title="Bersih"><?= $row['kebersihan'] ?></span>
+                                    <span title="Bersosialisasi"><?= $row['bersosialisasi'] ?></span> -
+                                    <span title="Mengeluarkan Pendapat"><?= $row['berpendapat'] ?></span> -
+                                    <span title="Kestabilan Emosi"><?= $row['kestabilan_emosi'] ?></span> -
+                                    <span title="Kedisiplinan"><?= $row['kedisiplinan'] ?></span> -
+                                    <span title="Kepedulian"><?= $row['kepedulian'] ?></span> -
+                                    <span title="Kebersihan"><?= $row['kebersihan'] ?></span>
                                 </td>
                                 <td class="px-4 py-3 text-xs font-bold text-center border-l border-gray-100">
                                     <span class="px-2 py-0.5 bg-blue-50 text-blue-700 rounded border border-blue-100">

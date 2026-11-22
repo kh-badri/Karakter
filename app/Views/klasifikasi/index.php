@@ -61,7 +61,7 @@
                     <?php 
                     $vars = [
                         'bersosialisasi' => 'Bersosialisasi', 
-                        'berpendapat' => 'Berpendapat', 
+                        'berpendapat' => 'Mengeluarkan Pendapat', 
                         'kestabilan_emosi' => 'Kestabilan Emosi', 
                         'kedisiplinan' => 'Kedisiplinan', 
                         'kepedulian' => 'Kepedulian', 
@@ -107,9 +107,9 @@
                 </div>
                 <div class="text-[10px] text-gray-600 space-y-1">
                     <p class="font-bold text-gray-800 mb-0.5">Keterangan:</p>
-                    <p><span class="font-bold w-12 inline-block">P(C | X)</span> = probabilitas kelas C berdasarkan data X.</p>
-                    <p><span class="font-bold w-12 inline-block">P(X | C)</span> = probabilitas data X apabila diketahui termasuk ke dalam kelas C.</p>
-                    <p><span class="font-bold w-12 inline-block">P(C)</span> = probabilitas awal atau probabilitas kelas C.</p>
+                    <p><span class="font-bold w-12 inline-block">P(C | X)</span> = probabilitas kategori C berdasarkan data X.</p>
+                    <p><span class="font-bold w-12 inline-block">P(X | C)</span> = probabilitas data X apabila diketahui termasuk ke dalam kategori C.</p>
+                    <p><span class="font-bold w-12 inline-block">P(C)</span> = probabilitas awal atau probabilitas kategori C.</p>
                     <p><span class="font-bold w-12 inline-block">P(X)</span> = probabilitas kemunculan data X.</p>
                 </div>
             </div>
@@ -130,7 +130,7 @@
                     <p><span class="font-bold w-12 inline-block">Y</span> = hasil klasifikasi akhir.</p>
                     <p><span class="font-bold w-12 inline-block">T1..Tn(x)</span> = hasil prediksi dari masing-masing <em>Decision Tree</em>.</p>
                     <p><span class="font-bold w-12 inline-block">n</span> = jumlah <em>Decision Tree</em>.</p>
-                    <p><span class="font-bold w-12 inline-block">Mode</span> = kelas yang paling banyak muncul.</p>
+                    <p><span class="font-bold w-12 inline-block">Mode</span> = kategori yang paling banyak muncul.</p>
                 </div>
             </div>
         </div>

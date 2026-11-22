@@ -63,12 +63,12 @@
         <div class="grid grid-cols-3 md:grid-cols-6 gap-3">
             <?php 
             $labels = [
-                'bersosialisasi' => 'Sosial', 
-                'berpendapat' => 'Pendapat', 
-                'kestabilan_emosi' => 'Emosi', 
-                'kedisiplinan' => 'Disiplin', 
-                'kepedulian' => 'Peduli', 
-                'kebersihan' => 'Bersih'
+                'bersosialisasi'   => 'Bersosialisasi', 
+                'berpendapat'      => 'Mengeluarkan Pendapat', 
+                'kestabilan_emosi' => 'Kestabilan Emosi', 
+                'kedisiplinan'     => 'Kedisiplinan', 
+                'kepedulian'       => 'Kepedulian', 
+                'kebersihan'       => 'Kebersihan'
             ];
             foreach($labels as $key => $title): 
             ?>
@@ -99,7 +99,7 @@
                         </div>
                     <?php endif; ?>
                     
-                    <h3 class="text-xs font-black text-gray-900 mb-3 border-b border-gray-100 pb-1.5">Kelas: <span class="text-color-1"><?= $label ?></span></h3>
+                    <h3 class="text-xs font-black text-gray-900 mb-3 border-b border-gray-100 pb-1.5">Kategori: <span class="text-color-1"><?= $label ?></span></h3>
                     
                     <div class="space-y-2 text-[10px] font-medium text-gray-600 font-mono">
                         <div class="flex justify-between items-center bg-gray-50 p-1.5 rounded">
@@ -130,7 +130,7 @@
                 <div class="bg-green-100 text-green-700 p-1.5 rounded-full"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
                 <div>
                     <p class="text-[10px] font-bold text-green-800">Kesimpulan Naive Bayes:</p>
-                    <p class="text-xs font-medium text-green-700">Berdasarkan nilai Posterior tertinggi (<strong><?= number_format($nb_results['posteriors'][$nb_results['predicted_class']], 6) ?></strong>), siswa diklasifikasikan ke kelas <strong class="font-black uppercase tracking-wider text-green-900">"<?= $nb_results['predicted_class'] ?>"</strong>.</p>
+                    <p class="text-xs font-medium text-green-700">Berdasarkan nilai Posterior tertinggi (<strong><?= number_format($nb_results['posteriors'][$nb_results['predicted_class']], 6) ?></strong>), siswa diklasifikasikan ke kategori <strong class="font-black uppercase tracking-wider text-green-900">"<?= $nb_results['predicted_class'] ?>"</strong>.</p>
                 </div>
             </div>
         </div>
@@ -160,7 +160,7 @@
             
             <div class="mt-5 flex flex-col md:flex-row gap-5 items-center bg-gray-50 p-4 rounded-xl border border-gray-100">
                 <div class="flex-1">
-                    <h4 class="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-2">Voting Kelas (Mode)</h4>
+                    <h4 class="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-2">Voting Kategori (Mode)</h4>
                     <div class="flex flex-wrap gap-3">
                         <?php foreach($rf_results['vote_counts'] as $class => $count): ?>
                         <div class="flex items-center gap-1.5">

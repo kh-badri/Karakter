@@ -101,14 +101,14 @@
                     <div>
                         <p class="text-white font-bold text-[10px] uppercase tracking-wider mb-1">Atribut Prediktor</p>
                         <ul class="text-xs text-gray-700 space-y-0.5 font-medium">
-                            <li>• Bersosialisasi & Berpendapat</li>
+                            <li>• Bersosialisasi & Mengeluarkan Pendapat</li>
                             <li>• Kestabilan Emosi & Kedisiplinan</li>
                             <li>• Kepedulian & Kebersihan</li>
                         </ul>
                     </div>
                     <div>
                         <p class="text-white font-bold text-[10px] uppercase tracking-wider mb-1">Label Target</p>
-                        <p class="text-xs text-gray-700 leading-relaxed font-medium">Kelas keluaran (misal: Ekstrover, Introver, Disiplin).</p>
+                        <p class="text-xs text-gray-700 leading-relaxed font-medium">Kategori keluaran (misal: Terbuka & Ekspresif, Tertutup & Menyendiri, Fleksibel & Seimbang).</p>
                     </div>
                 </div>
             </div>
@@ -117,19 +117,19 @@
         <!-- THE DATA TABLE -->
         <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
             <div class="overflow-x-auto h-[600px] custom-scrollbar">
-                <table class="w-full text-left border-collapse min-w-[900px] text-xs">
+                <table class="w-full text-left border-collapse min-w-[1000px] text-xs">
                     <thead class="sticky top-0 z-10 bg-white/90 backdrop-blur-md">
                         <tr>
                             <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 w-12">No</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100">Nama Siswa</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center" title="Bersosialisasi">Sosial</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center" title="Berpendapat">Pendapat</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center" title="Kestabilan Emosi">Emosi</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center" title="Kedisiplinan">Disiplin</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center" title="Kepedulian">Peduli</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center" title="Kebersihan">Bersih</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center">Label Target</th>
-                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center w-24">Aksi</th>
+                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 whitespace-nowrap">Nama Siswa</th>
+                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center whitespace-nowrap">Bersosialisasi</th>
+                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center whitespace-nowrap">Mengeluarkan Pendapat</th>
+                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center whitespace-nowrap">Kestabilan Emosi</th>
+                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center whitespace-nowrap">Kedisiplinan</th>
+                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center whitespace-nowrap">Kepedulian</th>
+                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center whitespace-nowrap">Kebersihan</th>
+                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center whitespace-nowrap">Label Karakter</th>
+                            <th class="px-4 py-3 font-bold text-gray-500 border-b-2 border-gray-100 text-center w-24 whitespace-nowrap">Aksi</th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-800">
@@ -205,7 +205,7 @@
 
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
                     <?php 
-                    $vars = ['bersosialisasi' => 'Bersosialisasi', 'berpendapat' => 'Berpendapat', 'kestabilan_emosi' => 'Emosi', 'kedisiplinan' => 'Kedisiplinan', 'kepedulian' => 'Kepedulian', 'kebersihan' => 'Kebersihan'];
+                    $vars = ['bersosialisasi' => 'Bersosialisasi', 'berpendapat' => 'Mengeluarkan Pendapat', 'kestabilan_emosi' => 'Kestabilan Emosi', 'kedisiplinan' => 'Kedisiplinan', 'kepedulian' => 'Kepedulian', 'kebersihan' => 'Kebersihan'];
                     foreach($vars as $key => $label): 
                     ?>
                     <div>
@@ -223,7 +223,7 @@
 
                 <div class="mb-6">
                     <label class="block text-xs font-bold text-gray-600 mb-1">Label Karakter</label>
-                    <input type="text" name="label_karakter" class="block w-full rounded-lg border border-gray-200 focus:border-color-1 focus:ring-0 bg-gray-50 text-gray-800 p-2.5 transition-colors" placeholder="Contoh: Ekstrover" required>
+                    <input type="text" name="label_karakter" class="block w-full rounded-lg border border-gray-200 focus:border-color-1 focus:ring-0 bg-gray-50 text-gray-800 p-2.5 transition-colors" placeholder="Contoh: Terbuka & Ekspresif" required>
                 </div>
 
                 <button type="submit" class="w-full rounded-lg bg-color-1 py-3 text-white font-bold hover:bg-[#b89578] transition-colors shadow-sm">Simpan Ke Database</button>
