@@ -41,17 +41,17 @@
         <div class="overflow-x-auto">
             <table class="w-full text-left border-collapse">
                 <thead>
-                    <tr class="bg-gray-50 border-b border-gray-100">
-                        <th class="px-4 py-3 text-[10px] font-extrabold text-gray-500 uppercase tracking-widest w-12 text-center">No</th>
-                        <th class="px-4 py-3 text-[10px] font-extrabold text-gray-500 uppercase tracking-widest">Waktu Simpan</th>
-                        <th class="px-4 py-3 text-[10px] font-extrabold text-gray-500 uppercase tracking-widest">Nama Siswa</th>
-                        <th class="px-4 py-3 text-[10px] font-extrabold text-gray-500 uppercase tracking-widest text-center">Data 6 Atribut (1-5)</th>
-                        <th class="px-4 py-3 text-[10px] font-extrabold text-gray-500 uppercase tracking-widest text-center border-l border-gray-100">Hasil NB</th>
-                        <th class="px-4 py-3 text-[10px] font-extrabold text-gray-500 uppercase tracking-widest text-center">Hasil RF</th>
-                        <th class="px-4 py-3 text-[10px] font-extrabold text-gray-500 uppercase tracking-widest text-right">Aksi</th>
+                    <tr class="bg-gray-50 border-b border-gray-100 text-[11px] font-extrabold text-gray-600 uppercase tracking-wider">
+                        <th class="px-4 py-3 font-extrabold w-12 text-center">No</th>
+                        <th class="px-4 py-3 font-extrabold">Waktu Simpan</th>
+                        <th class="px-4 py-3 font-extrabold">Nama Siswa</th>
+                        <th class="px-4 py-3 font-extrabold text-center">Data 6 Atribut (1-5)</th>
+                        <th class="px-4 py-3 font-extrabold text-center border-l border-gray-100">Hasil NB</th>
+                        <th class="px-4 py-3 font-extrabold text-center">Hasil RF</th>
+                        <th class="px-4 py-3 font-extrabold text-right">Aksi</th>
                     </tr>
                 </thead>
-                <tbody class="divide-y divide-gray-50">
+                <tbody class="divide-y divide-gray-50 text-[13px]">
                     <?php if (empty($riwayat)) : ?>
                         <tr>
                             <td colspan="7" class="px-4 py-12 text-center">
@@ -67,15 +67,15 @@
                     <?php else : ?>
                         <?php $no = 1; foreach ($riwayat as $row) : ?>
                             <tr class="hover:bg-gray-50/50 transition-colors">
-                                <td class="px-4 py-3 text-xs font-bold text-gray-400 text-center"><?= $no++ ?></td>
-                                <td class="px-4 py-3 text-xs text-gray-600 font-medium">
+                                <td class="px-4 py-3 text-center text-gray-400 font-normal"><?= $no++ ?></td>
+                                <td class="px-4 py-3 text-gray-600 font-normal leading-snug">
                                     <?= date('d M Y', strtotime($row['tanggal_simpan'])) ?><br>
-                                    <span class="text-[10px] text-gray-400"><?= date('H:i', strtotime($row['tanggal_simpan'])) ?> WIB</span>
+                                    <span class="text-[11px] text-gray-400"><?= date('H:i', strtotime($row['tanggal_simpan'])) ?> WIB</span>
                                 </td>
-                                <td class="px-4 py-3 text-xs font-extrabold text-gray-800">
+                                <td class="px-4 py-3 font-normal text-gray-800">
                                     <?= esc($row['nama_siswa']) ?>
                                 </td>
-                                <td class="px-4 py-3 text-[10px] text-gray-500 font-mono text-center">
+                                <td class="px-4 py-3 text-xs text-gray-600 font-mono text-center font-normal">
                                     <span title="Bersosialisasi"><?= $row['bersosialisasi'] ?></span> -
                                     <span title="Mengeluarkan Pendapat"><?= $row['berpendapat'] ?></span> -
                                     <span title="Kestabilan Emosi"><?= $row['kestabilan_emosi'] ?></span> -
@@ -83,18 +83,18 @@
                                     <span title="Kepedulian"><?= $row['kepedulian'] ?></span> -
                                     <span title="Kebersihan"><?= $row['kebersihan'] ?></span>
                                 </td>
-                                <td class="px-4 py-3 text-xs font-bold text-center border-l border-gray-100">
-                                    <span class="px-2 py-0.5 bg-blue-50 text-blue-700 rounded border border-blue-100">
+                                <td class="px-4 py-3 text-center border-l border-gray-100">
+                                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-normal bg-blue-50 text-blue-800 border border-blue-100 whitespace-nowrap">
                                         <?= esc(format_kategori_karakter($row['hasil_nb'])) ?>
                                     </span>
                                 </td>
-                                <td class="px-4 py-3 text-xs font-bold text-center">
-                                    <span class="px-2 py-0.5 bg-green-50 text-green-700 rounded border border-green-100">
+                                <td class="px-4 py-3 text-center">
+                                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-normal bg-green-50 text-green-800 border border-green-100 whitespace-nowrap">
                                         <?= esc(format_kategori_karakter($row['hasil_rf'])) ?>
                                     </span>
                                 </td>
                                 <td class="px-4 py-3 text-right">
-                                    <div class="flex items-center justify-end gap-1">
+                                    <div class="flex items-center justify-end gap-1.5">
                                         <a href="<?= base_url('history/detail/' . $row['id']) ?>" class="p-1.5 text-gray-400 hover:text-blue-500 hover:bg-blue-50 rounded-md transition-colors inline-flex" title="Lihat Detail Klasifikasi">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
