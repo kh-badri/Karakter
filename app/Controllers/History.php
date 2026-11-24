@@ -38,6 +38,10 @@ class History extends BaseController
         // Load KarakterModel manual karena di-load di base controller Klasifikasi
         $db = \Config\Database::connect();
         $dataset = $db->table('data_karakter')->get()->getResultArray();
+        foreach ($dataset as &$row) {
+            $row['label_karakter'] = format_kategori_karakter($row['label_karakter']);
+        }
+        unset($row);
 
         $nb_results = $klasifikasi->calculateNaiveBayes($dataset, $riwayat);
         $rf_results = $klasifikasi->calculateRandomForest($dataset, $riwayat, 5);

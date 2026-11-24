@@ -43,8 +43,8 @@
                     <input type="hidden" name="kedisiplinan" value="<?= esc($input['kedisiplinan']) ?>">
                     <input type="hidden" name="kepedulian" value="<?= esc($input['kepedulian']) ?>">
                     <input type="hidden" name="kebersihan" value="<?= esc($input['kebersihan']) ?>">
-                    <input type="hidden" name="hasil_nb" value="<?= esc($nb_results['predicted_class']) ?>">
-                    <input type="hidden" name="hasil_rf" value="<?= esc($rf_results['final_prediction']) ?>">
+                    <input type="hidden" name="hasil_nb" value="<?= esc(format_kategori_karakter($nb_results['predicted_class'])) ?>">
+                    <input type="hidden" name="hasil_rf" value="<?= esc(format_kategori_karakter($rf_results['final_prediction'])) ?>">
                     
                     <button type="submit" class="bg-color-1 hover:bg-[#b89578] text-white px-3 py-1.5 rounded-md text-xs font-bold shadow-sm transition-colors flex items-center gap-1.5">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -100,7 +100,7 @@
                     <?php endif; ?>
                     
                     <h3 class="text-xs font-black text-gray-900 mb-2 border-b border-gray-100 pb-1.5 flex items-center justify-between">
-                        <span>Kategori: <span class="text-color-1"><?= $label ?></span></span>
+                        <span>Kategori: <span class="text-color-1"><?= esc(format_kategori_karakter($label)) ?></span></span>
                     </h3>
                     
                     <div class="space-y-1.5">
@@ -143,7 +143,7 @@
                 <div class="bg-green-100 text-green-700 p-1.5 rounded-full shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
                 <div>
                     <p class="text-[9.5px] font-bold text-green-800">Kesimpulan Naive Bayes:</p>
-                    <p class="text-[11px] font-medium text-green-700">Berdasarkan nilai Posterior tertinggi (<strong><?= number_format($nb_results['posteriors'][$nb_results['predicted_class']], 6) ?></strong>), siswa diklasifikasikan ke kategori <strong class="font-black uppercase tracking-wider text-green-900">"<?= $nb_results['predicted_class'] ?>"</strong>.</p>
+                    <p class="text-[11px] font-medium text-green-700">Berdasarkan nilai Posterior tertinggi (<strong><?= number_format($nb_results['posteriors'][$nb_results['predicted_class']], 6) ?></strong>), siswa diklasifikasikan ke kategori <strong class="font-black uppercase tracking-wider text-green-900">"<?= esc(format_kategori_karakter($nb_results['predicted_class'])) ?>"</strong>.</p>
                 </div>
             </div>
         </div>
@@ -167,7 +167,7 @@
                         <p class="text-[8px] text-gray-500 mb-2 min-h-[2.2rem] flex items-center justify-center leading-tight">Split: <?= implode(', ', array_map(function($f) use ($labels) { return $labels[$f]; }, $tree['features_used'])) ?></p>
                     </div>
                     <div class="bg-gray-50 py-1 rounded-md text-[10px] font-black text-gray-800 uppercase">
-                        <?= $tree['prediction'] ?>
+                        <?= esc(format_kategori_karakter($tree['prediction'])) ?>
                     </div>
                 </div>
                 <?php endforeach; ?>
@@ -179,7 +179,7 @@
                     <div class="flex flex-wrap gap-2">
                         <?php foreach($rf_results['vote_counts'] as $class => $count): ?>
                         <div class="flex items-center gap-1.5">
-                            <span class="px-2 py-0.5 bg-white border border-gray-200 rounded text-[9.5px] font-bold text-gray-700"><?= $class ?></span>
+                            <span class="px-2 py-0.5 bg-white border border-gray-200 rounded text-[9.5px] font-bold text-gray-700"><?= esc(format_kategori_karakter($class)) ?></span>
                             <span class="text-[11px] font-black text-color-1"><?= $count ?> Suara</span>
                         </div>
                         <?php endforeach; ?>
@@ -190,7 +190,7 @@
                     <div class="bg-green-100 text-green-700 p-1.5 rounded-full shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
                     <div>
                         <p class="text-[9.5px] font-bold text-green-800">Kesimpulan Random Forest:</p>
-                        <p class="text-[11px] font-medium text-green-700">Berdasarkan suara terbanyak (Mode), siswa diklasifikasikan sebagai <strong class="font-black uppercase tracking-wider text-green-900">"<?= $rf_results['final_prediction'] ?>"</strong>.</p>
+                        <p class="text-[11px] font-medium text-green-700">Berdasarkan suara terbanyak (Mode), siswa diklasifikasikan sebagai <strong class="font-black uppercase tracking-wider text-green-900">"<?= esc(format_kategori_karakter($rf_results['final_prediction'])) ?>"</strong>.</p>
                     </div>
                 </div>
             </div>

@@ -1,1 +1,92 @@
-# Semua file diizinkan masuk ke repositori
+# ---------------------------------------------------------------------
+# 1. Environment & Sensitive Config
+# ---------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ---------------------------------------------------------------------
+# 2. CodeIgniter 4 Writable Directory (Runtime, Cache, Logs, Sessions)
+# ---------------------------------------------------------------------
+/writable/cache/*
+!/writable/cache/index.html
+!/writable/cache/.gitkeep
+
+/writable/debugbar/*
+!/writable/debugbar/index.html
+!/writable/debugbar/.gitkeep
+
+/writable/logs/*
+!/writable/logs/index.html
+!/writable/logs/.gitkeep
+
+/writable/session/*
+!/writable/session/index.html
+!/writable/session/.gitkeep
+
+/writable/uploads/*
+!/writable/uploads/index.html
+!/writable/uploads/.gitkeep
+
+# ---------------------------------------------------------------------
+# 3. Dependencies & Package Managers
+# ---------------------------------------------------------------------
+/vendor/
+composer.phar
+/node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---------------------------------------------------------------------
+# 4. Python Environment & Caches
+# ---------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+venv/
+.venv/
+env/
+ENV/
+
+# ---------------------------------------------------------------------
+# 5. Temporary, Logs, & Test Files
+# ---------------------------------------------------------------------
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+cookie.txt
+test_*.php
+scratch_*.php
+
+# ---------------------------------------------------------------------
+# 6. IDEs, Editors, & Tooling
+# ---------------------------------------------------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+.buildpath
+/nbproject/
+/.c9/
+/.php_cs.cache
+/build/
+
+# ---------------------------------------------------------------------
+# 7. Operating System Files
+# ---------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini

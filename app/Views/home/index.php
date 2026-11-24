@@ -192,7 +192,7 @@
                                 <div class="flex items-center gap-2 shrink-0">
                                     <div class="hidden sm:block text-right mr-2">
                                         <p class="text-[10px] font-bold text-gray-400 uppercase">Naive Bayes</p>
-                                        <p class="text-xs font-bold text-gray-700"><?= esc($row['hasil_nb']) ?></p>
+                                        <p class="text-xs font-bold text-gray-700"><?= esc(format_kategori_karakter($row['hasil_nb'])) ?></p>
                                     </div>
                                     <a href="<?= base_url('history/detail/' . $row['id']) ?>" class="p-2 text-gray-400 hover:text-color-1 hover:bg-color-1/10 rounded-md transition-colors" title="Lihat Detail">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

@@ -13,3 +13,33 @@
  *
  * @see: https://codeigniter.com/user_guide/extending/common.html
  */
+
+if (!function_exists('format_kategori_karakter')) {
+    /**
+     * Standardisasi dan format label kategori karakter siswa:
+     * - ekstrover / ekstrovert -> Terbuka & Ekspresif
+     * - introver / introvert   -> Tertutup & Menyendiri
+     * - ambiver / ambivert     -> Fleksibel & Seimbang
+     */
+    function format_kategori_karakter(?string $label): string
+    {
+        if ($label === null) {
+            return '';
+        }
+        $trimmed = trim($label);
+        $lower = strtolower($trimmed);
+
+        if (str_contains($lower, 'ekstrover') || str_contains($lower, 'ekstrovert')) {
+            return 'Terbuka & Ekspresif';
+        }
+        if (str_contains($lower, 'introver') || str_contains($lower, 'introvert')) {
+            return 'Tertutup & Menyendiri';
+        }
+        if (str_contains($lower, 'ambiver') || str_contains($lower, 'ambivert')) {
+            return 'Fleksibel & Seimbang';
+        }
+
+        return $trimmed;
+    }
+}
+

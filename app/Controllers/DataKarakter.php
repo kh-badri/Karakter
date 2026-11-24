@@ -16,6 +16,16 @@ class DataKarakter extends BaseController
 
     public function index()
     {
+        // Sinkronisasi otomatis data lama di database jika ada format lama
+        try {
+            $db = \Config\Database::connect();
+            $db->query("UPDATE data_karakter SET label_karakter = 'Terbuka & Ekspresif' WHERE label_karakter LIKE 'ekstrover%'");
+            $db->query("UPDATE data_karakter SET label_karakter = 'Tertutup & Menyendiri' WHERE label_karakter LIKE 'introver%'");
+            $db->query("UPDATE data_karakter SET label_karakter = 'Fleksibel & Seimbang' WHERE label_karakter LIKE 'ambiver%'");
+        } catch (\Throwable $e) {
+            // Lanjutkan jika terjadi kendala akses update
+        }
+
         $data = [
             'title'       => 'Dataset Karakteristik Siswa',
             'dataset'     => $this->karakterModel->getAllData(),
@@ -53,7 +63,7 @@ class DataKarakter extends BaseController
             'kedisiplinan'     => $this->request->getPost('kedisiplinan'),
             'kepedulian'       => $this->request->getPost('kepedulian'),
             'kebersihan'       => $this->request->getPost('kebersihan'),
-            'label_karakter'   => $this->request->getPost('label_karakter'),
+            'label_karakter'   => format_kategori_karakter($this->request->getPost('label_karakter')),
         ]);
 
         return redirect()->to('/data-karakter')->with('success', 'Data siswa berhasil ditambahkan manual!');
@@ -107,7 +117,7 @@ class DataKarakter extends BaseController
                 'kedisiplinan'     => trim($row[4]),
                 'kepedulian'       => trim($row[5]),
                 'kebersihan'       => trim($row[6]),
-                'label_karakter'   => trim($row[7]),
+                'label_karakter'   => format_kategori_karakter(trim($row[7])),
             ];
         }
 
@@ -159,7 +169,7 @@ class DataKarakter extends BaseController
             'kedisiplinan'     => $this->request->getPost('kedisiplinan'),
             'kepedulian'       => $this->request->getPost('kepedulian'),
             'kebersihan'       => $this->request->getPost('kebersihan'),
-            'label_karakter'   => $this->request->getPost('label_karakter'),
+            'label_karakter'   => format_kategori_karakter($this->request->getPost('label_karakter')),
         ]);
 
         return redirect()->to('/data-karakter')->with('success', 'Data berhasil diperbarui.');

@@ -158,7 +158,7 @@
                                     <td class="px-2 py-2 text-center font-bold text-gray-700"><?= $d['kebersihan'] ?></td>
                                     <td class="px-2 py-2 text-center">
                                         <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-gray-100 text-gray-700 whitespace-nowrap">
-                                            <?= esc($d['label_karakter']) ?>
+                                            <?= esc(format_kategori_karakter($d['label_karakter'])) ?>
                                         </span>
                                     </td>
                                     <td class="px-2 py-2 text-center">

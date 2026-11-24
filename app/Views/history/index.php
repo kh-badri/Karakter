@@ -85,12 +85,12 @@
                                 </td>
                                 <td class="px-4 py-3 text-xs font-bold text-center border-l border-gray-100">
                                     <span class="px-2 py-0.5 bg-blue-50 text-blue-700 rounded border border-blue-100">
-                                        <?= esc($row['hasil_nb']) ?>
+                                        <?= esc(format_kategori_karakter($row['hasil_nb'])) ?>
                                     </span>
                                 </td>
                                 <td class="px-4 py-3 text-xs font-bold text-center">
                                     <span class="px-2 py-0.5 bg-green-50 text-green-700 rounded border border-green-100">
-                                        <?= esc($row['hasil_rf']) ?>
+                                        <?= esc(format_kategori_karakter($row['hasil_rf'])) ?>
                                     </span>
                                 </td>
                                 <td class="px-4 py-3 text-right">

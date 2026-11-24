@@ -39,10 +39,32 @@ class Klasifikasi extends BaseController
         ];
 
         // 2. Ambil Dataset Training
+        // Sinkronisasi otomatis data lama di database jika ada format lama
+        try {
+            $db = \Config\Database::connect();
+            $db->query("UPDATE data_karakter SET label_karakter = 'Terbuka & Ekspresif' WHERE label_karakter LIKE 'ekstrover%'");
+            $db->query("UPDATE data_karakter SET label_karakter = 'Tertutup & Menyendiri' WHERE label_karakter LIKE 'introver%'");
+            $db->query("UPDATE data_karakter SET label_karakter = 'Fleksibel & Seimbang' WHERE label_karakter LIKE 'ambiver%'");
+            $db->query("UPDATE history_klasifikasi SET hasil_nb = 'Terbuka & Ekspresif' WHERE hasil_nb LIKE 'ekstrover%'");
+            $db->query("UPDATE history_klasifikasi SET hasil_nb = 'Tertutup & Menyendiri' WHERE hasil_nb LIKE 'introver%'");
+            $db->query("UPDATE history_klasifikasi SET hasil_nb = 'Fleksibel & Seimbang' WHERE hasil_nb LIKE 'ambiver%'");
+            $db->query("UPDATE history_klasifikasi SET hasil_rf = 'Terbuka & Ekspresif' WHERE hasil_rf LIKE 'ekstrover%'");
+            $db->query("UPDATE history_klasifikasi SET hasil_rf = 'Tertutup & Menyendiri' WHERE hasil_rf LIKE 'introver%'");
+            $db->query("UPDATE history_klasifikasi SET hasil_rf = 'Fleksibel & Seimbang' WHERE hasil_rf LIKE 'ambiver%'");
+        } catch (\Throwable $e) {
+            // Lanjutkan jika terjadi kendala akses update
+        }
+
         $dataset = $this->dataKarakterModel->findAll();
         if (empty($dataset)) {
             return redirect()->to('/klasifikasi')->with('error', 'Dataset kosong. Silakan isi data latih di menu Dataset Siswa.');
         }
+
+        // Standardisasi label seluruh baris dataset
+        foreach ($dataset as &$row) {
+            $row['label_karakter'] = format_kategori_karakter($row['label_karakter']);
+        }
+        unset($row);
 
         // ==========================================
         // ALGORITMA NAIVE BAYES
@@ -312,8 +334,8 @@ class Klasifikasi extends BaseController
             'kedisiplinan'     => $this->request->getPost('kedisiplinan'),
             'kepedulian'       => $this->request->getPost('kepedulian'),
             'kebersihan'       => $this->request->getPost('kebersihan'),
-            'hasil_nb'         => $this->request->getPost('hasil_nb'),
-            'hasil_rf'         => $this->request->getPost('hasil_rf'),
+            'hasil_nb'         => format_kategori_karakter($this->request->getPost('hasil_nb')),
+            'hasil_rf'         => format_kategori_karakter($this->request->getPost('hasil_rf')),
             'tanggal_simpan'   => date('Y-m-d H:i:s')
         ]);
 
